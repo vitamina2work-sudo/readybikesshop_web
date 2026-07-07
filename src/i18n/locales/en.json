@@ -25,11 +25,18 @@
   "site": {
     "description": "Motorcycle workshop and shop for accessories, spare parts and gear. Professional service with a personal touch.",
     "hoursTitle": "Opening hours",
-    "hoursWeekdays": "Mon–Fri: 9:00 – 19:00",
-    "hoursSaturday": "Sat: 9:00 – 14:00",
-    "hoursSunday": "Sun: Closed",
+    "hours": {
+      "monday": "Monday: 8:00 – 19:00",
+      "tuesday": "Tuesday: 8:00 – 19:00",
+      "wednesday": "Wednesday: 8:00 – 19:00",
+      "thursday": "Thursday: 8:00 – 19:00",
+      "friday": "Friday: 8:00 – 16:00",
+      "saturday": "Saturday: Closed",
+      "sunday": "Sunday: Closed"
+    },
     "contactTitle": "Contact",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "privacyPolicy": "Privacy policy"
   },
   "hero": {
     "badge": "Workshop & Showcase",
@@ -159,6 +166,49 @@
           "name": "Racing",
           "desc": "Bold red and deep backgrounds, sporty and aggressive."
         }
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "lastUpdated": "Last updated: July 2026",
+    "intro": "At {{name}} we respect your privacy and process your personal data transparently and securely, in accordance with Regulation (EU) 2016/679 (GDPR) and applicable Spanish data protection law.",
+    "sections": {
+      "controller": {
+        "title": "1. Data controller",
+        "body": "Controller: {{name}}.\nAddress: {{address}}.\nEmail: {{email}}.\nPhone: {{phone}}."
+      },
+      "data": {
+        "title": "2. Data we collect",
+        "body": "Depending on how you use the website, we may process:\n• Account data: name, email and phone if you register.\n• Browsing data: IP address, device type, language and pages visited.\n• Contact data: messages you send us by email, phone or WhatsApp.\n• Preferences: language and theme settings stored in your browser."
+      },
+      "purpose": {
+        "title": "3. Purpose of processing",
+        "body": "We use your data to:\n• Manage your user account and access to the website.\n• Display the product showcase and respond to your enquiries.\n• Handle appointment requests or information about our workshop services.\n• Maintain site security and improve its operation.\n• Comply with applicable legal obligations."
+      },
+      "legalBasis": {
+        "title": "4. Legal basis",
+        "body": "The legal basis for processing may be:\n• Your consent (e.g. when creating an account or contacting us).\n• Performance of pre-contractual measures or a contract.\n• Legitimate interest in maintaining and protecting the website.\n• Compliance with legal obligations."
+      },
+      "retention": {
+        "title": "5. Retention period",
+        "body": "We will keep your data while you maintain an active account or as long as necessary for the stated purpose. Contact data will be kept only as long as needed to handle your request. Once legal periods expire or data is no longer required, it will be securely deleted or anonymised."
+      },
+      "recipients": {
+        "title": "6. Recipients and processors",
+        "body": "We do not sell your data. We may share it only with providers that supply essential services for the website, such as hosting, database (Supabase) or messaging, always under contract and with appropriate safeguards. We may also disclose data to authorities when legally required."
+      },
+      "rights": {
+        "title": "7. Your rights",
+        "body": "You may exercise your rights of access, rectification, erasure, objection, restriction of processing and portability by writing to {{email}}. You also have the right to lodge a complaint with the Spanish Data Protection Agency (www.aepd.es) if you believe processing does not comply with the law."
+      },
+      "cookies": {
+        "title": "8. Cookies and local storage",
+        "body": "This website may use technical cookies and browser local storage to remember your session, language or theme preferences. You can configure your browser to block or delete cookies, although some features may no longer be available."
+      },
+      "changes": {
+        "title": "9. Changes to this policy",
+        "body": "We may update this privacy policy to reflect legal changes or service improvements. The current version will always be published on this page. We recommend reviewing it periodically."
       }
     }
   },

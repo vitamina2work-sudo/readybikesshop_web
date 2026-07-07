@@ -25,11 +25,18 @@
   "site": {
     "description": "Taller de motos i botiga d'accessoris, recanvis i equipament. Servei professional i tracte proper.",
     "hoursTitle": "Horari",
-    "hoursWeekdays": "Dl–Dv: 9:00 – 19:00",
-    "hoursSaturday": "Ds: 9:00 – 14:00",
-    "hoursSunday": "Dg: Tancat",
+    "hours": {
+      "monday": "Dilluns: 8:00 – 19:00",
+      "tuesday": "Dimarts: 8:00 – 19:00",
+      "wednesday": "Dimecres: 8:00 – 19:00",
+      "thursday": "Dijous: 8:00 – 19:00",
+      "friday": "Divendres: 8:00 – 16:00",
+      "saturday": "Dissabte: Tancat",
+      "sunday": "Diumenge: Tancat"
+    },
     "contactTitle": "Contacte",
-    "rights": "Tots els drets reservats."
+    "rights": "Tots els drets reservats.",
+    "privacyPolicy": "Política de privacitat"
   },
   "hero": {
     "badge": "Taller & Aparador",
@@ -159,6 +166,49 @@
           "name": "Racing",
           "desc": "Vermell intens i fons profunds, estil esportiu i agressiu."
         }
+      }
+    }
+  },
+  "privacy": {
+    "title": "Política de privacitat",
+    "lastUpdated": "Darrera actualització: juliol de 2026",
+    "intro": "A {{name}} respectem la teva privacitat i tractem les teves dades personals de manera transparent i segura, d'acord amb el Reglament (UE) 2016/679 (RGPD) i la normativa espanyola vigent en matèria de protecció de dades.",
+    "sections": {
+      "controller": {
+        "title": "1. Responsable del tractament",
+        "body": "Responsable: {{name}}.\nDomicili: {{address}}.\nCorreu electrònic: {{email}}.\nTelèfon: {{phone}}."
+      },
+      "data": {
+        "title": "2. Dades que recopilem",
+        "body": "Podem tractar les dades següents segons com facis servir la web:\n• Dades de compte: nom, correu electrònic i telèfon si et registres.\n• Dades de navegació: adreça IP, tipus de dispositiu, idioma i pàgines visitades.\n• Dades de contacte: missatges que ens enviïs per correu, telèfon o WhatsApp.\n• Preferències: idioma i tema visual desats al navegador."
+      },
+      "purpose": {
+        "title": "3. Finalitat del tractament",
+        "body": "Utilitzem les teves dades per:\n• Gestionar el teu compte d'usuari i l'accés a la web.\n• Mostrar l'aparador de productes i respondre a les teves consultes.\n• Atendre sol·licituds de cita o informació sobre els serveis del taller.\n• Mantenir la seguretat del lloc i millorar el seu funcionament.\n• Complir obligacions legals aplicables."
+      },
+      "legalBasis": {
+        "title": "4. Legitimació",
+        "body": "La base legal del tractament pot ser:\n• El teu consentiment (per exemple, en crear un compte o contactar-nos).\n• L'execució de mesures precontractuals o d'un contracte.\n• L'interès legítim a mantenir i protegir la web.\n• El compliment d'obligacions legals."
+      },
+      "retention": {
+        "title": "5. Termini de conservació",
+        "body": "Conservarem les teves dades mentre mantinguis un compte actiu o sigui necessari per a la finalitat indicada. Les dades de contacte es conservaran el temps imprescindible per atendre la teva sol·licitud. Un cop expirats els terminis legals o quan ja no siguin necessàries, s'eliminaran o s'anonimitzaran de manera segura."
+      },
+      "recipients": {
+        "title": "6. Destinataris i encarregats",
+        "body": "No venem les teves dades. Només les podem compartir amb proveïdors que ens presten serveis necessaris per a la web, com allotjament, base de dades (Supabase) o missatgeria, sempre sota contracte i amb garanties adequades. També les podrem comunicar a autoritats quan hi hagi obligació legal."
+      },
+      "rights": {
+        "title": "7. Els teus drets",
+        "body": "Pots exercir els drets d'accés, rectificació, supressió, oposició, limitació del tractament i portabilitat escrivint a {{email}}. També tens dret a presentar una reclamació davant l'Agència Espanyola de Protecció de Dades (www.aepd.es) si consideres que el tractament no s'ajusta a la normativa."
+      },
+      "cookies": {
+        "title": "8. Cookies i emmagatzematge local",
+        "body": "Aquesta web pot utilitzar cookies tècniques i emmagatzematge local del navegador per recordar la teva sessió, idioma o preferències de tema. Pots configurar el navegador per bloquejar o eliminar cookies, tot i que algunes funcions podrien deixar d'estar disponibles."
+      },
+      "changes": {
+        "title": "9. Canvis en aquesta política",
+        "body": "Podem actualitzar aquesta política de privacitat per adaptar-la a canvis legals o millores del servei. Publicarem la versió vigent en aquesta mateixa pàgina. Et recomanem revisar-la periòdicament."
       }
     }
   },

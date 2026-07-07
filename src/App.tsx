@@ -16,6 +16,7 @@ import { ArticlesPage } from '@/pages/admin/ArticlesPage'
 import { CategoriesPage } from '@/pages/admin/CategoriesPage'
 import { SitePage } from '@/pages/admin/SitePage'
 import { DiagnosticsPage } from '@/pages/DiagnosticsPage'
+import { PrivacyPolicyPage } from '@/pages/PrivacyPolicyPage'
 import { ColorThemeApplier } from '@/components/ColorThemeApplier'
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
               <Route path="cuenta/registro" element={<RegisterPage />} />
               <Route path="cuenta" element={<AccountPage />} />
               <Route path="diagnostico" element={<DiagnosticsPage />} />
+              <Route path="politica-privacidad" element={<PrivacyPolicyPage />} />
             </Route>
 
             <Route path="admin/login" element={<LoginPage />} />

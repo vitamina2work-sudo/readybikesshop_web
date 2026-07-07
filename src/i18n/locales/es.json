@@ -25,11 +25,18 @@
   "site": {
     "description": "Taller de motos y tienda de accesorios, recambios y equipamiento. Servicio profesional y trato cercano.",
     "hoursTitle": "Horario",
-    "hoursWeekdays": "L–V: 9:00 – 19:00",
-    "hoursSaturday": "S: 9:00 – 14:00",
-    "hoursSunday": "D: Cerrado",
+    "hours": {
+      "monday": "Lunes: 8:00 – 19:00",
+      "tuesday": "Martes: 8:00 – 19:00",
+      "wednesday": "Miércoles: 8:00 – 19:00",
+      "thursday": "Jueves: 8:00 – 19:00",
+      "friday": "Viernes: 8:00 – 16:00",
+      "saturday": "Sábado: Cerrado",
+      "sunday": "Domingo: Cerrado"
+    },
     "contactTitle": "Contacto",
-    "rights": "Todos los derechos reservados."
+    "rights": "Todos los derechos reservados.",
+    "privacyPolicy": "Política de privacidad"
   },
   "hero": {
     "badge": "Taller & Escaparate",
@@ -159,6 +166,49 @@
           "name": "Racing",
           "desc": "Rojo intenso y fondos profundos, estilo deportivo y agresivo."
         }
+      }
+    }
+  },
+  "privacy": {
+    "title": "Política de privacidad",
+    "lastUpdated": "Última actualización: julio de 2026",
+    "intro": "En {{name}} respetamos tu privacidad y tratamos tus datos personales de forma transparente y segura, conforme al Reglamento (UE) 2016/679 (RGPD) y la normativa española vigente en materia de protección de datos.",
+    "sections": {
+      "controller": {
+        "title": "1. Responsable del tratamiento",
+        "body": "Responsable: {{name}}.\nDomicilio: {{address}}.\nCorreo electrónico: {{email}}.\nTeléfono: {{phone}}."
+      },
+      "data": {
+        "title": "2. Datos que recopilamos",
+        "body": "Podemos tratar los siguientes datos según cómo uses la web:\n• Datos de cuenta: nombre, correo electrónico y teléfono si te registras.\n• Datos de navegación: dirección IP, tipo de dispositivo, idioma y páginas visitadas.\n• Datos de contacto: mensajes que nos envíes por correo, teléfono o WhatsApp.\n• Preferencias: idioma y tema visual guardados en tu navegador."
+      },
+      "purpose": {
+        "title": "3. Finalidad del tratamiento",
+        "body": "Utilizamos tus datos para:\n• Gestionar tu cuenta de usuario y el acceso a la web.\n• Mostrar el escaparate de productos y responder a tus consultas.\n• Atender solicitudes de cita o información sobre nuestros servicios de taller.\n• Mantener la seguridad del sitio y mejorar su funcionamiento.\n• Cumplir obligaciones legales aplicables."
+      },
+      "legalBasis": {
+        "title": "4. Legitimación",
+        "body": "La base legal del tratamiento puede ser:\n• Tu consentimiento (por ejemplo, al crear una cuenta o contactarnos).\n• La ejecución de medidas precontractuales o de un contrato.\n• El interés legítimo en mantener y proteger la web.\n• El cumplimiento de obligaciones legales."
+      },
+      "retention": {
+        "title": "5. Plazo de conservación",
+        "body": "Conservaremos tus datos mientras mantengas una cuenta activa o sea necesario para la finalidad indicada. Los datos de contacto se conservarán el tiempo imprescindible para atender tu solicitud. Transcurridos los plazos legales o cuando ya no sean necesarios, se eliminarán o anonimizarán de forma segura."
+      },
+      "recipients": {
+        "title": "6. Destinatarios y encargados",
+        "body": "No vendemos tus datos. Podemos compartirlos solo con proveedores que nos prestan servicios necesarios para la web, como alojamiento, base de datos (Supabase) o mensajería, siempre bajo contrato y con garantías adecuadas. También podremos comunicarlos a autoridades cuando exista obligación legal."
+      },
+      "rights": {
+        "title": "7. Tus derechos",
+        "body": "Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad escribiendo a {{email}}. También tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es) si consideras que el tratamiento no se ajusta a la normativa."
+      },
+      "cookies": {
+        "title": "8. Cookies y almacenamiento local",
+        "body": "Esta web puede utilizar cookies técnicas y almacenamiento local del navegador para recordar tu sesión, idioma o preferencias de tema. Puedes configurar tu navegador para bloquear o eliminar cookies, aunque algunas funciones podrían dejar de estar disponibles."
+      },
+      "changes": {
+        "title": "9. Cambios en esta política",
+        "body": "Podemos actualizar esta política de privacidad para adaptarla a cambios legales o mejoras del servicio. Publicaremos la versión vigente en esta misma página. Te recomendamos revisarla periódicamente."
       }
     }
   },

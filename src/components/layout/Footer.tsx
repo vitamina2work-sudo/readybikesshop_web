@@ -23,9 +23,11 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-sm">{t('site.hoursTitle')}</h3>
             <ul className="mt-3 space-y-1 text-sm text-muted-foreground">
-              <li>{t('site.hoursWeekdays')}</li>
-              <li>{t('site.hoursSaturday')}</li>
-              <li>{t('site.hoursSunday')}</li>
+              {(['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'] as const).map(
+                (day) => (
+                  <li key={day}>{t(`site.hours.${day}`)}</li>
+                )
+              )}
             </ul>
           </div>
 
@@ -60,12 +62,18 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t pt-6 sm:flex-row">
+        <div className="mt-10 flex flex-col items-center gap-2 border-t pt-6 sm:flex-row sm:justify-center sm:gap-3">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} {siteConfig.name}. {t('site.rights')}
           </p>
-          <Link to="/admin" className="text-xs text-muted-foreground hover:text-primary transition-colors">
-            {t('common.admin')}
+          <span className="hidden text-xs text-muted-foreground sm:inline" aria-hidden>
+            ·
+          </span>
+          <Link
+            to="/politica-privacidad"
+            className="text-xs text-muted-foreground underline-offset-4 hover:text-primary hover:underline"
+          >
+            {t('site.privacyPolicy')}
           </Link>
         </div>
       </div>
