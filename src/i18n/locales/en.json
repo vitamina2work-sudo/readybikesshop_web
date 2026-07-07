@@ -1,0 +1,183 @@
+{
+  "nav": {
+    "home": "Home",
+    "catalog": "Showcase",
+    "workshop": "Workshop",
+    "contact": "Contact",
+    "account": "My account",
+    "login": "Sign in",
+    "register": "Sign up",
+    "logout": "Sign out",
+    "menu": "Menu"
+  },
+  "common": {
+    "loading": "Loading…",
+    "save": "Save",
+    "cancel": "Cancel",
+    "admin": "Admin"
+  },
+  "language": {
+    "label": "Language",
+    "es": "Español",
+    "ca": "Català",
+    "en": "English"
+  },
+  "site": {
+    "description": "Motorcycle workshop and shop for accessories, spare parts and gear. Professional service with a personal touch.",
+    "hoursTitle": "Opening hours",
+    "hoursWeekdays": "Mon–Fri: 9:00 – 19:00",
+    "hoursSaturday": "Sat: 9:00 – 14:00",
+    "hoursSunday": "Sun: Closed",
+    "contactTitle": "Contact",
+    "rights": "All rights reserved."
+  },
+  "hero": {
+    "badge": "Workshop & Showcase",
+    "title": "Your bike in the best hands",
+    "subtitle": "Professional mechanics, quality parts and selected accessories. Visit our shop or contact us on WhatsApp.",
+    "appointment": "Book appointment",
+    "catalog": "View showcase"
+  },
+  "services": {
+    "title": "Workshop services",
+    "subtitle": "Maintenance, repairs and preparation so you can enjoy your bike with total confidence.",
+    "mechanics": {
+      "title": "General mechanics",
+      "description": "Inspections, tune-ups and engine, transmission and brake repairs."
+    },
+    "tyres": {
+      "title": "Tyres and suspension",
+      "description": "Fitting, balancing and suspension setup for maximum comfort and safety."
+    },
+    "electric": {
+      "title": "Electrical systems",
+      "description": "Diagnosis and repair of electrical systems, batteries and lighting."
+    },
+    "itv": {
+      "title": "Pre-MOT preparation",
+      "description": "Pre-inspection and preparation so your bike passes the MOT without surprises."
+    }
+  },
+  "cta": {
+    "title": "Need help with your bike?",
+    "subtitle": "Message us on WhatsApp or visit the shop. We're happy to advise you.",
+    "whatsapp": "Contact on WhatsApp",
+    "catalog": "Browse showcase"
+  },
+  "home": {
+    "categoriesTitle": "Our showcase",
+    "categoriesSubtitle": "Accessories, parts and gear organised by category."
+  },
+  "catalog": {
+    "title": "Showcase",
+    "subtitle": "Accessories, spare parts and gear available in store.",
+    "count_one": "{{count}} item",
+    "count_other": "{{count}} items",
+    "filters": "Filters",
+    "priceRange": "Price range",
+    "clear": "Clear",
+    "category": "Category",
+    "allCategories": "All categories",
+    "minPrice": "Min. price",
+    "maxPrice": "Max. price",
+    "onSaleOnly": "On sale only",
+    "noImage": "No image",
+    "onSale": "On sale",
+    "whatsapp": "Ask on WhatsApp",
+    "emptyTitle": "No items found",
+    "emptySubtitle": "Try adjusting the filters or check back later."
+  },
+  "whatsapp": {
+    "appointment": "Hi {{name}}, I'd like to book a workshop appointment. What availability do you have?",
+    "general": "Hi {{name}}, I have a question. Can you help me?",
+    "article": "Hi {{name}}, I'm interested in \"{{title}}\" ({{price}}). Is it available?",
+    "appointmentMobile": "Book appointment on WhatsApp"
+  },
+  "account": {
+    "loginTitle": "Sign in",
+    "loginSubtitle": "Access your customer account",
+    "registerTitle": "Create account",
+    "registerSubtitle": "Register to manage your profile",
+    "profileTitle": "My account",
+    "profileSubtitle": "Your profile details",
+    "email": "Email",
+    "password": "Password",
+    "fullName": "Full name",
+    "phone": "Phone",
+    "login": "Sign in",
+    "register": "Sign up",
+    "loggingIn": "Signing in…",
+    "registering": "Signing up…",
+    "saving": "Saving…",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "createAccount": "Create account",
+    "goLogin": "Sign in",
+    "loginError": "Invalid credentials",
+    "registerError": "Could not create account",
+    "registerSuccess": "Account created. Check your email if confirmation is required.",
+    "profileSaved": "Profile updated",
+    "profileError": "Error saving profile",
+    "memberSince": "Member since"
+  },
+  "admin": {
+    "loginTitle": "Admin panel",
+    "loginSubtitle": "Sign in with your administrator account",
+    "accessDenied": "You don't have administrator permissions",
+    "site": {
+      "title": "Website images",
+      "subtitle": "Customize photos and color theme for the public site. Products and categories are edited in their sections.",
+      "mainImages": "Main images",
+      "mainImagesHint": "Hero, logo, catalog banner and featured sections.",
+      "hero": "Hero image (homepage)",
+      "heroHint": "Homepage background. Recommended: 1920×1080 px.",
+      "logo": "Logo",
+      "logoHint": "Shown in the header. Min. 200×200 px.",
+      "about": "Workshop section image",
+      "aboutHint": "Large photo next to workshop services.",
+      "cta": "Call-to-action image",
+      "ctaHint": "Photo for the «Need help?» block.",
+      "catalogBanner": "Showcase banner",
+      "catalogBannerHint": "Header on /catalogo page.",
+      "serviceImages": "Service images",
+      "serviceImagesHint": "One photo per service card. Icon shown if empty.",
+      "otherImagesHint": "Product and category photos are managed in Articles and Categories.",
+      "saved": "Changes saved successfully",
+      "colorTheme": "Color theme",
+      "colorThemeHint": "Pick a coherent palette for backgrounds, buttons and accents. Works with light and dark mode.",
+      "colorThemeNote": "The light/dark toggle stays in the header; the theme adjusts colors for each mode.",
+      "themes": {
+        "classic": {
+          "name": "Classic",
+          "desc": "Ready Bikes orange on a neutral background. The current brand look."
+        },
+        "garage": {
+          "name": "Garage",
+          "desc": "Warm golden tones, industrial workshop feel."
+        },
+        "racing": {
+          "name": "Racing",
+          "desc": "Bold red and deep backgrounds, sporty and aggressive."
+        }
+      }
+    }
+  },
+  "diagnostics": {
+    "title": "Supabase diagnostics",
+    "subtitle": "Check the connection between the site and your Supabase project.",
+    "retry": "Run again",
+    "configuredUrl": "Configured URL",
+    "missing": "Not set",
+    "goAdmin": "Go to admin login",
+    "openInBrowser": "Open Supabase URL in browser",
+    "useChrome": "Important: open this page in Chrome (http://localhost:5174/diagnostico), not in the editor preview.",
+    "help1": "After changing .env: Ctrl+C in terminal → npm run dev → open the URL/port shown in the terminal.",
+    "help2": "In the browser, https://YOUR-ID.supabase.co should respond (even if it says \"invalid route\").",
+    "overall": {
+      "ok": "Connection OK. Supabase responds and configuration looks valid.",
+      "warn": "Partial connection. Review warnings below.",
+      "error": "Connection problems detected. Follow the red hints below.",
+      "pending": "Checking…"
+    }
+  }
+}

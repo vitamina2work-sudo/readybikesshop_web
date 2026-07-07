@@ -1,0 +1,183 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "catalog": "Escaparate",
+    "workshop": "Taller",
+    "contact": "Contacto",
+    "account": "Mi cuenta",
+    "login": "Entrar",
+    "register": "Registrarse",
+    "logout": "Cerrar sesión",
+    "menu": "Menú"
+  },
+  "common": {
+    "loading": "Cargando…",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "admin": "Admin"
+  },
+  "language": {
+    "label": "Idioma",
+    "es": "Español",
+    "ca": "Català",
+    "en": "English"
+  },
+  "site": {
+    "description": "Taller de motos y tienda de accesorios, recambios y equipamiento. Servicio profesional y trato cercano.",
+    "hoursTitle": "Horario",
+    "hoursWeekdays": "L–V: 9:00 – 19:00",
+    "hoursSaturday": "S: 9:00 – 14:00",
+    "hoursSunday": "D: Cerrado",
+    "contactTitle": "Contacto",
+    "rights": "Todos los derechos reservados."
+  },
+  "hero": {
+    "badge": "Taller & Escaparate",
+    "title": "Tu moto en las mejores manos",
+    "subtitle": "Mecánica profesional, recambios de calidad y accesorios seleccionados. Visítanos en tienda o consúltanos por WhatsApp.",
+    "appointment": "Pedir cita",
+    "catalog": "Ver escaparate"
+  },
+  "services": {
+    "title": "Servicios de taller",
+    "subtitle": "Mantenimiento, reparación y preparación para que disfrutes de tu moto con total confianza.",
+    "mechanics": {
+      "title": "Mecánica general",
+      "description": "Revisiones, puesta a punto y reparaciones de motor, transmisión y frenos."
+    },
+    "tyres": {
+      "title": "Neumáticos y suspensiones",
+      "description": "Montaje, equilibrado y ajuste de suspensiones para máximo confort y seguridad."
+    },
+    "electric": {
+      "title": "Electricidad",
+      "description": "Diagnóstico y reparación de sistemas eléctricos, baterías e iluminación."
+    },
+    "itv": {
+      "title": "Pre-ITV y preparación",
+      "description": "Revisión previa y preparación de tu moto para pasar la ITV sin sorpresas."
+    }
+  },
+  "cta": {
+    "title": "¿Necesitas ayuda con tu moto?",
+    "subtitle": "Escríbenos por WhatsApp o pásate por la tienda. Te asesoramos sin compromiso.",
+    "whatsapp": "Contactar por WhatsApp",
+    "catalog": "Explorar escaparate"
+  },
+  "home": {
+    "categoriesTitle": "Nuestro escaparate",
+    "categoriesSubtitle": "Accesorios, recambios y equipamiento organizados por categoría."
+  },
+  "catalog": {
+    "title": "Escaparate",
+    "subtitle": "Accesorios, recambios y equipamiento disponibles en tienda.",
+    "count_one": "{{count}} artículo",
+    "count_other": "{{count}} artículos",
+    "filters": "Filtros",
+    "priceRange": "Rango de precio",
+    "clear": "Limpiar",
+    "category": "Categoría",
+    "allCategories": "Todas las categorías",
+    "minPrice": "Precio mín.",
+    "maxPrice": "Precio máx.",
+    "onSaleOnly": "Solo en oferta",
+    "noImage": "Sin imagen",
+    "onSale": "En oferta",
+    "whatsapp": "Consultar por WhatsApp",
+    "emptyTitle": "No hay artículos",
+    "emptySubtitle": "Prueba a ajustar los filtros o vuelve más tarde."
+  },
+  "whatsapp": {
+    "appointment": "Hola {{name}}, me gustaría solicitar una cita en el taller. ¿Qué disponibilidad tenéis?",
+    "general": "Hola {{name}}, tengo una consulta. ¿Podéis ayudarme?",
+    "article": "Hola {{name}}, me interesa el artículo \"{{title}}\" ({{price}}). ¿Está disponible?",
+    "appointmentMobile": "Pedir cita por WhatsApp"
+  },
+  "account": {
+    "loginTitle": "Iniciar sesión",
+    "loginSubtitle": "Accede a tu cuenta de cliente",
+    "registerTitle": "Crear cuenta",
+    "registerSubtitle": "Regístrate para gestionar tu perfil",
+    "profileTitle": "Mi cuenta",
+    "profileSubtitle": "Datos de tu perfil",
+    "email": "Email",
+    "password": "Contraseña",
+    "fullName": "Nombre completo",
+    "phone": "Teléfono",
+    "login": "Entrar",
+    "register": "Registrarse",
+    "loggingIn": "Entrando…",
+    "registering": "Registrando…",
+    "saving": "Guardando…",
+    "noAccount": "¿No tienes cuenta?",
+    "hasAccount": "¿Ya tienes cuenta?",
+    "createAccount": "Crear cuenta",
+    "goLogin": "Iniciar sesión",
+    "loginError": "Credenciales incorrectas",
+    "registerError": "No se pudo crear la cuenta",
+    "registerSuccess": "Cuenta creada. Revisa tu email si se requiere confirmación.",
+    "profileSaved": "Perfil actualizado",
+    "profileError": "Error al guardar el perfil",
+    "memberSince": "Miembro desde"
+  },
+  "admin": {
+    "loginTitle": "Panel de administración",
+    "loginSubtitle": "Accede con tu cuenta de administrador",
+    "accessDenied": "No tienes permisos de administrador",
+    "site": {
+      "title": "Imágenes de la web",
+      "subtitle": "Personaliza fotos y tema de colores de la página pública. Los artículos y categorías se editan en sus secciones.",
+      "mainImages": "Imágenes principales",
+      "mainImagesHint": "Hero, logo, banner del catálogo y secciones destacadas.",
+      "hero": "Imagen del hero (portada)",
+      "heroHint": "Foto de fondo de la página de inicio. Recomendado: horizontal, 1920×1080 px.",
+      "logo": "Logo",
+      "logoHint": "Aparece en la cabecera. Cuadrado o circular, mín. 200×200 px.",
+      "about": "Imagen sección taller",
+      "aboutHint": "Foto grande junto a los servicios de taller.",
+      "cta": "Imagen llamada a la acción",
+      "ctaHint": "Foto del bloque «¿Necesitas ayuda?» al final de la home.",
+      "catalogBanner": "Banner del escaparate",
+      "catalogBannerHint": "Cabecera de la página /catalogo.",
+      "serviceImages": "Imágenes de servicios",
+      "serviceImagesHint": "Una foto por cada tarjeta de servicio. Si no subes imagen, se muestra el icono.",
+      "otherImagesHint": "Las fotos de productos y categorías se gestionan en Artículos y Categorías.",
+      "saved": "Cambios guardados correctamente",
+      "colorTheme": "Tema de colores",
+      "colorThemeHint": "Elige una paleta coherente para fondos, botones y acentos. Funciona con modo claro y oscuro.",
+      "colorThemeNote": "El interruptor claro/oscuro de la web sigue en la cabecera; el tema ajusta los colores de cada modo.",
+      "themes": {
+        "classic": {
+          "name": "Clásico",
+          "desc": "Naranja Ready Bikes sobre fondo neutro. El estilo actual de la marca."
+        },
+        "garage": {
+          "name": "Garaje",
+          "desc": "Tonos cálidos y dorados, ambiente de taller industrial."
+        },
+        "racing": {
+          "name": "Racing",
+          "desc": "Rojo intenso y fondos profundos, estilo deportivo y agresivo."
+        }
+      }
+    }
+  },
+  "diagnostics": {
+    "title": "Diagnóstico Supabase",
+    "subtitle": "Comprueba la conexión entre la web y tu proyecto Supabase.",
+    "retry": "Volver a comprobar",
+    "configuredUrl": "URL configurada",
+    "missing": "No definida",
+    "goAdmin": "Ir al login admin",
+    "openInBrowser": "Abrir URL de Supabase en el navegador",
+    "useChrome": "Abre esta página en Chrome externo. Si la URL de Supabase carga en otra pestaña pero aquí falla, desactiva bloqueadores de anuncios.",
+    "help1": "Si cambias .env: Ctrl+C en la terminal → npm run dev → abre la URL/puerto que indique la terminal.",
+    "help2": "En el navegador, https://TU-ID.supabase.co debe responder (aunque diga «ruta no válida»).",
+    "overall": {
+      "ok": "Conexión correcta. Supabase responde y la configuración parece válida.",
+      "warn": "Conexión parcial. Revisa los avisos abajo.",
+      "error": "Hay problemas de conexión. Sigue las pistas en rojo.",
+      "pending": "Comprobando…"
+    }
+  }
+}

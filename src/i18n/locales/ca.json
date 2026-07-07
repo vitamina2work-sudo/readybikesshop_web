@@ -1,0 +1,183 @@
+{
+  "nav": {
+    "home": "Inici",
+    "catalog": "Aparador",
+    "workshop": "Taller",
+    "contact": "Contacte",
+    "account": "El meu compte",
+    "login": "Entrar",
+    "register": "Registrar-se",
+    "logout": "Tancar sessió",
+    "menu": "Menú"
+  },
+  "common": {
+    "loading": "Carregant…",
+    "save": "Desar",
+    "cancel": "Cancel·lar",
+    "admin": "Admin"
+  },
+  "language": {
+    "label": "Idioma",
+    "es": "Español",
+    "ca": "Català",
+    "en": "English"
+  },
+  "site": {
+    "description": "Taller de motos i botiga d'accessoris, recanvis i equipament. Servei professional i tracte proper.",
+    "hoursTitle": "Horari",
+    "hoursWeekdays": "Dl–Dv: 9:00 – 19:00",
+    "hoursSaturday": "Ds: 9:00 – 14:00",
+    "hoursSunday": "Dg: Tancat",
+    "contactTitle": "Contacte",
+    "rights": "Tots els drets reservats."
+  },
+  "hero": {
+    "badge": "Taller & Aparador",
+    "title": "La teva moto en les millors mans",
+    "subtitle": "Mecànica professional, recanvis de qualitat i accessoris seleccionats. Visita'ns a la botiga o consulta'ns per WhatsApp.",
+    "appointment": "Demanar cita",
+    "catalog": "Veure aparador"
+  },
+  "services": {
+    "title": "Serveis de taller",
+    "subtitle": "Manteniment, reparació i preparació per gaudir de la teva moto amb total confiança.",
+    "mechanics": {
+      "title": "Mecànica general",
+      "description": "Revisions, posada a punt i reparacions de motor, transmissió i frens."
+    },
+    "tyres": {
+      "title": "Pneumàtics i suspensions",
+      "description": "Muntatge, equilibrat i ajust de suspensions per a màxim confort i seguretat."
+    },
+    "electric": {
+      "title": "Electricitat",
+      "description": "Diagnòstic i reparació de sistemes elèctrics, bateries i il·luminació."
+    },
+    "itv": {
+      "title": "Pre-ITV i preparació",
+      "description": "Revisió prèvia i preparació de la teva moto per passar la ITV sense sorpreses."
+    }
+  },
+  "cta": {
+    "title": "Necessites ajuda amb la teva moto?",
+    "subtitle": "Escriu-nos per WhatsApp o passa per la botiga. T'assessorem sense compromís.",
+    "whatsapp": "Contactar per WhatsApp",
+    "catalog": "Explorar aparador"
+  },
+  "home": {
+    "categoriesTitle": "El nostre aparador",
+    "categoriesSubtitle": "Accessoris, recanvis i equipament organitzats per categoria."
+  },
+  "catalog": {
+    "title": "Aparador",
+    "subtitle": "Accessoris, recanvis i equipament disponibles a la botiga.",
+    "count_one": "{{count}} article",
+    "count_other": "{{count}} articles",
+    "filters": "Filtres",
+    "priceRange": "Rang de preu",
+    "clear": "Netejar",
+    "category": "Categoria",
+    "allCategories": "Totes les categories",
+    "minPrice": "Preu mín.",
+    "maxPrice": "Preu màx.",
+    "onSaleOnly": "Només en oferta",
+    "noImage": "Sense imatge",
+    "onSale": "En oferta",
+    "whatsapp": "Consultar per WhatsApp",
+    "emptyTitle": "No hi ha articles",
+    "emptySubtitle": "Prova d'ajustar els filtres o torna més tard."
+  },
+  "whatsapp": {
+    "appointment": "Hola {{name}}, m'agradaria demanar una cita al taller. Quina disponibilitat teniu?",
+    "general": "Hola {{name}}, tinc una consulta. Em podeu ajudar?",
+    "article": "Hola {{name}}, m'interessa l'article \"{{title}}\" ({{price}}). Està disponible?",
+    "appointmentMobile": "Demanar cita per WhatsApp"
+  },
+  "account": {
+    "loginTitle": "Iniciar sessió",
+    "loginSubtitle": "Accedeix al teu compte de client",
+    "registerTitle": "Crear compte",
+    "registerSubtitle": "Registra't per gestionar el teu perfil",
+    "profileTitle": "El meu compte",
+    "profileSubtitle": "Dades del teu perfil",
+    "email": "Email",
+    "password": "Contrasenya",
+    "fullName": "Nom complet",
+    "phone": "Telèfon",
+    "login": "Entrar",
+    "register": "Registrar-se",
+    "loggingIn": "Entrant…",
+    "registering": "Registrant…",
+    "saving": "Desant…",
+    "noAccount": "No tens compte?",
+    "hasAccount": "Ja tens compte?",
+    "createAccount": "Crear compte",
+    "goLogin": "Iniciar sessió",
+    "loginError": "Credencials incorrectes",
+    "registerError": "No s'ha pogut crear el compte",
+    "registerSuccess": "Compte creat. Revisa el teu email si cal confirmació.",
+    "profileSaved": "Perfil actualitzat",
+    "profileError": "Error en desar el perfil",
+    "memberSince": "Membre des de"
+  },
+  "admin": {
+    "loginTitle": "Panell d'administració",
+    "loginSubtitle": "Accedeix amb el teu compte d'administrador",
+    "accessDenied": "No tens permisos d'administrador",
+    "site": {
+      "title": "Imatges de la web",
+      "subtitle": "Personalitza fotos i tema de colors de la pàgina pública. Articles i categories es editen a les seves seccions.",
+      "mainImages": "Imatges principals",
+      "mainImagesHint": "Hero, logo, banner de l'aparador i seccions destacades.",
+      "hero": "Imatge del hero (portada)",
+      "heroHint": "Fons de la pàgina d'inici. Recomanat: 1920×1080 px.",
+      "logo": "Logo",
+      "logoHint": "Apareix a la capçalera. Mín. 200×200 px.",
+      "about": "Imatge secció taller",
+      "aboutHint": "Foto gran al costat dels serveis de taller.",
+      "cta": "Imatge crida a l'acció",
+      "ctaHint": "Foto del bloc «Necessites ajuda?».",
+      "catalogBanner": "Banner de l'aparador",
+      "catalogBannerHint": "Capçalera de /catalogo.",
+      "serviceImages": "Imatges de serveis",
+      "serviceImagesHint": "Una foto per cada targeta de servei.",
+      "otherImagesHint": "Fotos de productes i categories a Articles i Categories.",
+      "saved": "Canvis desats correctament",
+      "colorTheme": "Tema de colors",
+      "colorThemeHint": "Tria una paleta coherent per a fons, botons i accents. Funciona amb mode clar i fosc.",
+      "colorThemeNote": "L'interruptor clar/fosc segueix a la capçalera; el tema ajusta els colors de cada mode.",
+      "themes": {
+        "classic": {
+          "name": "Clàssic",
+          "desc": "Taronja Ready Bikes sobre fons neutre. L'estil actual de la marca."
+        },
+        "garage": {
+          "name": "Garatge",
+          "desc": "Tons càlids i daurats, ambient de taller industrial."
+        },
+        "racing": {
+          "name": "Racing",
+          "desc": "Vermell intens i fons profunds, estil esportiu i agressiu."
+        }
+      }
+    }
+  },
+  "diagnostics": {
+    "title": "Diagnòstic Supabase",
+    "subtitle": "Comprova la connexió entre la web i el teu projecte Supabase.",
+    "retry": "Tornar a comprovar",
+    "configuredUrl": "URL configurada",
+    "missing": "No definida",
+    "goAdmin": "Anar al login admin",
+    "openInBrowser": "Obrir URL de Supabase al navegador",
+    "useChrome": "Important: obre aquesta pàgina a Chrome (http://localhost:5174/diagnostico), no al preview de l'editor.",
+    "help1": "Si canvies .env: Ctrl+C a la terminal → npm run dev → obre la URL/port que indiqui la terminal.",
+    "help2": "Al navegador, https://TU-ID.supabase.co ha de respondre (encara que digui «ruta no vàlida»).",
+    "overall": {
+      "ok": "Connexió correcta. Supabase respon i la configuració sembla vàlida.",
+      "warn": "Connexió parcial. Revisa els avisos a sota.",
+      "error": "Hi ha problemes de connexió. Segueix les pistes en vermell.",
+      "pending": "Comprovant…"
+    }
+  }
+}
