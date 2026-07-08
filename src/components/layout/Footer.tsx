@@ -11,13 +11,20 @@ export function Footer() {
   return (
     <footer id="contacto" className="border-t bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div
+          className="grid gap-8 md:grid-cols-3"
+          itemScope
+          itemType="https://schema.org/LocalBusiness"
+        >
           <div>
             <div className="flex items-center gap-2 font-bold text-lg">
               <Bike className="size-5 text-primary" />
-              {siteConfig.name}
+              <span itemProp="name">{siteConfig.name}</span>
             </div>
-            <p className="mt-3 text-sm text-muted-foreground">{t('site.description')}</p>
+            <p className="mt-3 text-sm text-muted-foreground" itemProp="description">
+              {t('site.description')}
+            </p>
+            <meta itemProp="url" content={siteConfig.url} />
           </div>
 
           <div>
@@ -33,22 +40,34 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold text-sm">{t('site.contactTitle')}</h3>
-            <ul className="mt-3 space-y-1 text-sm text-muted-foreground">
-              <li>{siteConfig.address}</li>
-              <li>
+            <address className="mt-3 space-y-1 text-sm text-muted-foreground not-italic">
+              <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                <span itemProp="streetAddress">Ctra. de Sabadell, 26</span>
+                {', '}
+                <span itemProp="postalCode">08211</span>{' '}
+                <span itemProp="addressLocality">Castellar del Vallès</span>
+                {', '}
+                <span itemProp="addressRegion">Barcelona</span>
+              </div>
+              <div>
                 <a
                   href={`tel:+34${siteConfig.phone.replace(/\D/g, '')}`}
                   className="hover:text-primary transition-colors"
+                  itemProp="telephone"
                 >
                   {siteConfig.phone}
                 </a>
-              </li>
-              <li>
-                <a href={`mailto:${siteConfig.email}`} className="hover:text-primary transition-colors">
+              </div>
+              <div>
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="hover:text-primary transition-colors"
+                  itemProp="email"
+                >
                   {siteConfig.email}
                 </a>
-              </li>
-              <li>
+              </div>
+              <div>
                 <a
                   href={whatsappUrl}
                   target="_blank"
@@ -57,8 +76,8 @@ export function Footer() {
                 >
                   WhatsApp
                 </a>
-              </li>
-            </ul>
+              </div>
+            </address>
           </div>
         </div>
 

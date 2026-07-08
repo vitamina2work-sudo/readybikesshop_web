@@ -38,6 +38,44 @@
     "rights": "Tots els drets reservats.",
     "privacyPolicy": "Política de privacitat"
   },
+  "seo": {
+    "siteName": "Ready Bikes Shop",
+    "default": {
+      "title": "{{name}} | Taller de motos a Castellar del Vallès",
+      "description": "Taller de motos, recanvis i accessoris a Castellar del Vallès (Barcelona). Mecànica, pneumàtics, electricitat i aparador."
+    },
+    "home": {
+      "title": "{{name}} | Taller de motos i aparador a Castellar del Vallès",
+      "description": "Taller de motos a Castellar del Vallès: mecànica, pneumàtics, electricitat, pre-ITV i botiga d'accessoris, recanvis i equipament."
+    },
+    "catalog": {
+      "title": "Aparador | {{name}} — Accessoris i recanvis de moto",
+      "description": "Catàleg d'accessoris, recanvis i equipament de moto a Ready Bikes Shop, Castellar del Vallès. Consulta disponibilitat per WhatsApp."
+    },
+    "privacy": {
+      "title": "Política de privacitat | {{name}}",
+      "description": "Informació sobre el tractament de dades personals a la web de Ready Bikes Shop, d'acord amb el RGPD."
+    },
+    "accountLogin": {
+      "title": "Iniciar sessió | {{name}}",
+      "description": "Accedeix al teu compte de client a Ready Bikes Shop."
+    },
+    "accountRegister": {
+      "title": "Crear compte | {{name}}",
+      "description": "Registra't com a client a Ready Bikes Shop."
+    },
+    "account": {
+      "title": "El meu compte | {{name}}",
+      "description": "Gestiona el teu perfil de client a Ready Bikes Shop."
+    },
+    "diagnostics": {
+      "title": "Diagnòstic tècnic | {{name}}",
+      "description": "Eina interna de comprovació de connexió amb Supabase."
+    },
+    "localBusiness": {
+      "description": "Taller de motos i botiga d'accessoris, recanvis i equipament a Castellar del Vallès, Barcelona. Servei professional de mecànica, pneumàtics, electricitat i preparació pre-ITV."
+    }
+  },
   "hero": {
     "badge": "Taller & Aparador",
     "title": "La teva moto en les millors mans",

@@ -38,6 +38,44 @@
     "rights": "All rights reserved.",
     "privacyPolicy": "Privacy policy"
   },
+  "seo": {
+    "siteName": "Ready Bikes Shop",
+    "default": {
+      "title": "{{name}} | Motorcycle workshop in Castellar del Vallès",
+      "description": "Motorcycle workshop, spare parts and accessories in Castellar del Vallès (Barcelona). Mechanics, tyres, electrics and showcase."
+    },
+    "home": {
+      "title": "{{name}} | Motorcycle workshop and showcase in Castellar del Vallès",
+      "description": "Motorcycle workshop in Castellar del Vallès: mechanics, tyres, electrics, pre-MOT checks and shop for accessories, parts and gear."
+    },
+    "catalog": {
+      "title": "Showcase | {{name}} — Motorcycle accessories and parts",
+      "description": "Catalogue of motorcycle accessories, spare parts and gear at Ready Bikes Shop, Castellar del Vallès. Check availability on WhatsApp."
+    },
+    "privacy": {
+      "title": "Privacy policy | {{name}}",
+      "description": "Information about personal data processing on the Ready Bikes Shop website, in accordance with GDPR."
+    },
+    "accountLogin": {
+      "title": "Sign in | {{name}}",
+      "description": "Sign in to your Ready Bikes Shop customer account."
+    },
+    "accountRegister": {
+      "title": "Create account | {{name}}",
+      "description": "Register as a customer at Ready Bikes Shop."
+    },
+    "account": {
+      "title": "My account | {{name}}",
+      "description": "Manage your Ready Bikes Shop customer profile."
+    },
+    "diagnostics": {
+      "title": "Technical diagnostics | {{name}}",
+      "description": "Internal Supabase connection check tool."
+    },
+    "localBusiness": {
+      "description": "Motorcycle workshop and shop for accessories, spare parts and gear in Castellar del Vallès, Barcelona. Professional mechanics, tyres, electrics and pre-MOT preparation."
+    }
+  },
   "hero": {
     "badge": "Workshop & Showcase",
     "title": "Your bike in the best hands",

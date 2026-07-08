@@ -38,6 +38,44 @@
     "rights": "Todos los derechos reservados.",
     "privacyPolicy": "Política de privacidad"
   },
+  "seo": {
+    "siteName": "Ready Bikes Shop",
+    "default": {
+      "title": "{{name}} | Taller de motos en Castellar del Vallès",
+      "description": "Taller de motos, recambios y accesorios en Castellar del Vallès (Barcelona). Mecánica, neumáticos, electricidad y escaparate."
+    },
+    "home": {
+      "title": "{{name}} | Taller de motos y escaparate en Castellar del Vallès",
+      "description": "Taller de motos en Castellar del Vallès: mecánica, neumáticos, electricidad, pre-ITV y tienda de accesorios, recambios y equipamiento."
+    },
+    "catalog": {
+      "title": "Escaparate | {{name}} — Accesorios y recambios para moto",
+      "description": "Catálogo de accesorios, recambios y equipamiento para moto en Ready Bikes Shop, Castellar del Vallès. Consulta disponibilidad por WhatsApp."
+    },
+    "privacy": {
+      "title": "Política de privacidad | {{name}}",
+      "description": "Información sobre el tratamiento de datos personales en la web de Ready Bikes Shop, conforme al RGPD."
+    },
+    "accountLogin": {
+      "title": "Iniciar sesión | {{name}}",
+      "description": "Accede a tu cuenta de cliente en Ready Bikes Shop."
+    },
+    "accountRegister": {
+      "title": "Crear cuenta | {{name}}",
+      "description": "Regístrate como cliente en Ready Bikes Shop."
+    },
+    "account": {
+      "title": "Mi cuenta | {{name}}",
+      "description": "Gestiona tu perfil de cliente en Ready Bikes Shop."
+    },
+    "diagnostics": {
+      "title": "Diagnóstico técnico | {{name}}",
+      "description": "Herramienta interna de comprobación de conexión con Supabase."
+    },
+    "localBusiness": {
+      "description": "Taller de motos y tienda de accesorios, recambios y equipamiento en Castellar del Vallès, Barcelona. Servicio profesional de mecánica, neumáticos, electricidad y preparación pre-ITV."
+    }
+  },
   "hero": {
     "badge": "Taller & Escaparate",
     "title": "Tu moto en las mejores manos",
