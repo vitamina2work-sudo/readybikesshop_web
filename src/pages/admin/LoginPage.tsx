@@ -1,7 +1,7 @@
 import { useState, useEffect, type FormEvent } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Bike } from 'lucide-react'
+import { BrandLogo } from '@/components/brand/BrandLogo'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -68,8 +68,8 @@ export function LoginPage() {
 
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <div className="mx-auto mb-2 flex size-12 items-center justify-center rounded-full bg-primary/10">
-            <Bike className="size-6 text-primary" />
+          <div className="mx-auto mb-2 flex size-16 items-center justify-center">
+            <BrandLogo variant="emblem" className="size-16" />
           </div>
           <CardTitle>{t('admin.loginTitle')}</CardTitle>
           <CardDescription>{t('admin.loginSubtitle')}</CardDescription>

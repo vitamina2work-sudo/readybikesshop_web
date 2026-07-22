@@ -39,7 +39,7 @@
     "privacyPolicy": "Política de privacidad"
   },
   "seo": {
-    "siteName": "Ready Bikes Shop",
+    "siteName": "Ready Motos",
     "default": {
       "title": "{{name}} | Taller de motos en Castellar del Vallès",
       "description": "Taller de motos, recambios y accesorios en Castellar del Vallès (Barcelona). Mecánica, neumáticos, electricidad y escaparate."
@@ -50,23 +50,23 @@
     },
     "catalog": {
       "title": "Escaparate | {{name}} — Accesorios y recambios para moto",
-      "description": "Catálogo de accesorios, recambios y equipamiento para moto en Ready Bikes Shop, Castellar del Vallès. Consulta disponibilidad por WhatsApp."
+      "description": "Catálogo de accesorios, recambios y equipamiento para moto en Ready Motos, Castellar del Vallès. Consulta disponibilidad por WhatsApp."
     },
     "privacy": {
       "title": "Política de privacidad | {{name}}",
-      "description": "Información sobre el tratamiento de datos personales en la web de Ready Bikes Shop, conforme al RGPD."
+      "description": "Información sobre el tratamiento de datos personales en la web de Ready Motos, conforme al RGPD."
     },
     "accountLogin": {
       "title": "Iniciar sesión | {{name}}",
-      "description": "Accede a tu cuenta de cliente en Ready Bikes Shop."
+      "description": "Accede a tu cuenta de cliente en Ready Motos."
     },
     "accountRegister": {
       "title": "Crear cuenta | {{name}}",
-      "description": "Regístrate como cliente en Ready Bikes Shop."
+      "description": "Regístrate como cliente en Ready Motos."
     },
     "account": {
       "title": "Mi cuenta | {{name}}",
-      "description": "Gestiona tu perfil de cliente en Ready Bikes Shop."
+      "description": "Gestiona tu perfil de cliente en Ready Motos."
     },
     "diagnostics": {
       "title": "Diagnóstico técnico | {{name}}",
@@ -194,7 +194,7 @@
       "themes": {
         "classic": {
           "name": "Clásico",
-          "desc": "Naranja Ready Bikes sobre fondo neutro. El estilo actual de la marca."
+          "desc": "Rojo Ready Motos sobre fondo neutro. El estilo actual de la marca."
         },
         "garage": {
           "name": "Garaje",

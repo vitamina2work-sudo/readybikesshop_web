@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Bike } from 'lucide-react'
 import { siteConfig } from '@/config/site'
+import { BrandLogo } from '@/components/brand/BrandLogo'
 import { buildGeneralWhatsAppMessage, buildWhatsAppUrl } from '@/lib/whatsapp'
 
 export function Footer() {
@@ -17,9 +17,11 @@ export function Footer() {
           itemType="https://schema.org/LocalBusiness"
         >
           <div>
-            <div className="flex items-center gap-2 font-bold text-lg">
-              <Bike className="size-5 text-primary" />
-              <span itemProp="name">{siteConfig.name}</span>
+            <div className="flex items-center">
+              <BrandLogo variant="horizontal" className="h-8 max-w-[200px]" />
+              <span className="sr-only" itemProp="name">
+                {siteConfig.name}
+              </span>
             </div>
             <p className="mt-3 text-sm text-muted-foreground" itemProp="description">
               {t('site.description')}

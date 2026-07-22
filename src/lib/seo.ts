@@ -1,4 +1,5 @@
 import { siteConfig } from '@/config/site'
+import { brandAssets } from '@/config/brand'
 
 export interface PageSeoConfig {
   title: string
@@ -38,7 +39,7 @@ export function applyPageSeo(config: PageSeoConfig, locale: string) {
   const url = absoluteUrl(path)
   const title = config.title
   const description = config.description
-  const image = absoluteUrl('/favicon.svg')
+  const image = absoluteUrl(brandAssets.logoEmblem)
   const robots = config.noindex ? 'noindex, nofollow' : 'index, follow'
 
   document.title = title
@@ -179,7 +180,7 @@ export function buildLocalBusinessSchema(description: string) {
     name: siteConfig.name,
     description,
     url: getSiteOrigin(),
-    image: absoluteUrl('/favicon.svg'),
+    image: absoluteUrl(brandAssets.logoEmblem),
     telephone: phoneE164,
     email: siteConfig.email,
     priceRange: '€€',

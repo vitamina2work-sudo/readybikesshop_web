@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { BrandLogo } from '@/components/brand/BrandLogo'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -44,6 +45,9 @@ export function RegisterPage() {
 
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
+          <div className="mx-auto mb-2 flex size-14 items-center justify-center">
+            <BrandLogo variant="emblem" className="size-14" />
+          </div>
           <CardTitle>{t('account.registerTitle')}</CardTitle>
           <CardDescription>{t('account.registerSubtitle')}</CardDescription>
         </CardHeader>

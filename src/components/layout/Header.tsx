@@ -1,8 +1,9 @@
 import { useState, type MouseEvent } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Menu, X, Bike, User } from 'lucide-react'
+import { Menu, X, User } from 'lucide-react'
 import { siteConfig } from '@/config/site'
+import { BrandLogo } from '@/components/brand/BrandLogo'
 import { useAuth } from '@/hooks/useAuth'
 import { useSiteSettings } from '@/hooks/useSiteSettings'
 import { ThemeToggle } from '@/components/ThemeToggle'
@@ -57,11 +58,13 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2 font-bold text-lg tracking-tight">
           {settings.logo_url ? (
-            <img src={settings.logo_url} alt="" className="size-9 rounded-lg object-cover" />
+            <>
+              <BrandLogo variant="emblem" src={settings.logo_url} className="size-9 rounded-lg object-cover" />
+              <span className="sr-only sm:not-sr-only">{siteConfig.name}</span>
+            </>
           ) : (
-            <Bike className="size-6 text-primary" />
+            <BrandLogo variant="horizontal" />
           )}
-          <span>{siteConfig.name}</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">

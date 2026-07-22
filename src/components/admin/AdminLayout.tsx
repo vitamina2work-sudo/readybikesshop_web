@@ -1,6 +1,7 @@
 import { Navigate, Outlet, NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import { Bike, LayoutDashboard, Package, Tags, LogOut, Image } from 'lucide-react'
+import { LayoutDashboard, Package, Tags, LogOut, Image } from 'lucide-react'
+import { BrandLogo } from '@/components/brand/BrandLogo'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '@/hooks/useAuth'
 import { siteConfig } from '@/config/site'
@@ -36,7 +37,7 @@ export function AdminLayout() {
     <div className="flex min-h-screen">
       <aside className="hidden w-64 flex-col border-r bg-muted/30 md:flex">
         <div className="flex h-16 items-center gap-2 border-b px-4 font-bold">
-          <Bike className="size-5 text-primary" />
+          <BrandLogo variant="emblem" className="size-8" />
           Admin
         </div>
         <nav className="flex-1 space-y-1 p-3">

@@ -39,7 +39,7 @@
     "privacyPolicy": "Privacy policy"
   },
   "seo": {
-    "siteName": "Ready Bikes Shop",
+    "siteName": "Ready Motos",
     "default": {
       "title": "{{name}} | Motorcycle workshop in Castellar del Vallès",
       "description": "Motorcycle workshop, spare parts and accessories in Castellar del Vallès (Barcelona). Mechanics, tyres, electrics and showcase."
@@ -50,23 +50,23 @@
     },
     "catalog": {
       "title": "Showcase | {{name}} — Motorcycle accessories and parts",
-      "description": "Catalogue of motorcycle accessories, spare parts and gear at Ready Bikes Shop, Castellar del Vallès. Check availability on WhatsApp."
+      "description": "Catalogue of motorcycle accessories, spare parts and gear at Ready Motos, Castellar del Vallès. Check availability on WhatsApp."
     },
     "privacy": {
       "title": "Privacy policy | {{name}}",
-      "description": "Information about personal data processing on the Ready Bikes Shop website, in accordance with GDPR."
+      "description": "Information about personal data processing on the Ready Motos website, in accordance with GDPR."
     },
     "accountLogin": {
       "title": "Sign in | {{name}}",
-      "description": "Sign in to your Ready Bikes Shop customer account."
+      "description": "Sign in to your Ready Motos customer account."
     },
     "accountRegister": {
       "title": "Create account | {{name}}",
-      "description": "Register as a customer at Ready Bikes Shop."
+      "description": "Register as a customer at Ready Motos."
     },
     "account": {
       "title": "My account | {{name}}",
-      "description": "Manage your Ready Bikes Shop customer profile."
+      "description": "Manage your Ready Motos customer profile."
     },
     "diagnostics": {
       "title": "Technical diagnostics | {{name}}",
@@ -194,7 +194,7 @@
       "themes": {
         "classic": {
           "name": "Classic",
-          "desc": "Ready Bikes orange on a neutral background. The current brand look."
+          "desc": "Ready Motos red on a neutral background. The current brand look."
         },
         "garage": {
           "name": "Garage",
