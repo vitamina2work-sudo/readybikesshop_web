@@ -1,0 +1,35 @@
+# Evita la pausa automática del plan Free de Supabase (inactividad ~7 días).
+# Consulta la API REST directamente — no pasa por la web ni afecta Google Analytics.
+#
+# Secrets en GitHub → Settings → Secrets and variables → Actions:
+#   VITE_SUPABASE_URL       → https://TU-PROJECT-ID.supabase.co
+#   VITE_SUPABASE_ANON_KEY  → clave anon/public del proyecto
+
+name: Supabase Keep-Alive
+
+on:
+  schedule:
+    # Cada 3 días a las 08:00 UTC (margen amplio respecto al límite de 7 días)
+    - cron: '0 8 */3 * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase REST API
+        env:
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "Faltan secrets: VITE_SUPABASE_URL y/o VITE_SUPABASE_ANON_KEY"
+            exit 1
+          fi
+
+          BASE="${SUPABASE_URL%/}"
+          curl -sf "${BASE}/rest/v1/categories?select=id&limit=1" \
+            -H "apikey: ${SUPABASE_ANON_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}"
+
+          echo "OK — actividad registrada en Supabase ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
