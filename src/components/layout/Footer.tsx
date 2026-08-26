@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { siteConfig } from '@/config/site'
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { OfficialDealers } from '@/components/brand/OfficialDealers'
 import { buildGeneralWhatsAppMessage, buildWhatsAppUrl } from '@/lib/whatsapp'
 
 export function Footer() {
@@ -18,7 +19,7 @@ export function Footer() {
         >
           <div>
             <div className="flex items-center">
-              <BrandLogo variant="horizontal" className="h-8 max-w-[200px]" />
+              <BrandLogo variant="horizontal" className="h-12 max-w-[260px] sm:h-14 sm:max-w-[300px]" />
               <span className="sr-only" itemProp="name">
                 {siteConfig.name}
               </span>
@@ -26,6 +27,7 @@ export function Footer() {
             <p className="mt-3 text-sm text-muted-foreground" itemProp="description">
               {t('site.description')}
             </p>
+            <OfficialDealers variant="compact" className="mt-5" />
             <meta itemProp="url" content={siteConfig.url} />
           </div>
 

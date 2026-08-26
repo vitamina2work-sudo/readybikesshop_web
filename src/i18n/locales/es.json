@@ -83,6 +83,11 @@
     "appointment": "Pedir cita",
     "catalog": "Ver escaparate"
   },
+  "dealers": {
+    "title": "Concesionario oficial",
+    "ariaLabel": "Marcas de motos con concesionario oficial",
+    "brandLink": "Visitar web oficial de {{brand}}"
+  },
   "services": {
     "title": "Servicios de taller",
     "subtitle": "Mantenimiento, reparación y preparación para que disfrutes de tu moto con total confianza.",

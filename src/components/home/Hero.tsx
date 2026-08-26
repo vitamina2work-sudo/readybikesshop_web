@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ArrowRight, MessageCircle, Sparkles } from 'lucide-react'
+import { BrandLogo } from '@/components/brand/BrandLogo'
+import { OfficialDealers } from '@/components/brand/OfficialDealers'
 import { Button } from '@/components/ui/button'
 import { useSiteSettings } from '@/hooks/useSiteSettings'
 import { buildAppointmentWhatsAppMessage, buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -31,6 +33,21 @@ export function Hero() {
 
       <div className="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
         <div className="max-w-2xl animate-slide-up">
+          {settings.logo_url ? (
+            <BrandLogo
+              variant="emblem"
+              src={settings.logo_url}
+              className="mb-8 size-24 rounded-2xl object-cover shadow-md sm:size-28 lg:size-32"
+            />
+          ) : (
+            <BrandLogo
+              variant="horizontal"
+              className="mb-8 h-16 w-auto max-w-[min(100%,340px)] object-contain object-left sm:h-20 sm:max-w-[380px] lg:h-24 lg:max-w-[420px]"
+            />
+          )}
+
+          <OfficialDealers variant="hero" className="mb-8" />
+
           <p className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
             <Sparkles className="size-4" />
             {t('hero.badge')}

@@ -55,15 +55,19 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2 font-bold text-lg tracking-tight">
+      <div className="mx-auto flex h-[4.75rem] max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-8">
+        <Link to="/" className="flex shrink-0 items-center gap-2 font-bold text-lg tracking-tight">
           {settings.logo_url ? (
             <>
-              <BrandLogo variant="emblem" src={settings.logo_url} className="size-9 rounded-lg object-cover" />
+              <BrandLogo
+                variant="emblem"
+                src={settings.logo_url}
+                className="size-12 rounded-lg object-cover sm:size-14"
+              />
               <span className="sr-only sm:not-sr-only">{siteConfig.name}</span>
             </>
           ) : (
-            <BrandLogo variant="horizontal" />
+            <BrandLogo variant="horizontal" className="h-12 max-w-[min(100%,300px)] sm:h-14 sm:max-w-[320px]" />
           )}
         </Link>
 

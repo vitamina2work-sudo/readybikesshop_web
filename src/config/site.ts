@@ -3,8 +3,8 @@ export const siteConfig = {
   url: import.meta.env.VITE_SITE_URL ?? 'https://readybikesshop.vitamina2work.com',
   whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER ?? '34600000000',
   address: 'Ctra. de Sabadell, 26, 08211 Castellar del Vallès, Barcelona',
-  phone: '937 14 26 90',
-  email: 'info@readybikes.es',
+  phone: '644 69 22 04',
+  email: 'readycastellar@gmail.com',
   geo: {
     region: 'ES-B',
     placename: 'Castellar del Vallès',

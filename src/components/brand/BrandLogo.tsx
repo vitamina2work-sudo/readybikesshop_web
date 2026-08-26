@@ -14,11 +14,11 @@ type BrandLogoProps = {
 const variantDefaults: Record<BrandLogoVariant, { src: string; className: string }> = {
   horizontal: {
     src: brandAssets.logoHorizontal,
-    className: 'h-9 w-auto max-w-[min(100%,220px)] object-contain object-left',
+    className: 'h-12 w-auto max-w-[min(100%,280px)] object-contain object-left sm:h-14',
   },
   emblem: {
     src: brandAssets.logoEmblem,
-    className: 'size-10 object-contain',
+    className: 'size-12 object-contain sm:size-14',
   },
 }
 

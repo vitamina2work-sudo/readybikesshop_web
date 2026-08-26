@@ -83,6 +83,11 @@
     "appointment": "Book appointment",
     "catalog": "View showcase"
   },
+  "dealers": {
+    "title": "Official dealer",
+    "ariaLabel": "Official motorcycle dealership brands",
+    "brandLink": "Visit official {{brand}} website"
+  },
   "services": {
     "title": "Workshop services",
     "subtitle": "Maintenance, repairs and preparation so you can enjoy your bike with total confidence.",
