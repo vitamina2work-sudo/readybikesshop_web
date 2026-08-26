@@ -213,7 +213,7 @@ export function buildLocalBusinessSchema(description: string) {
         closes: slot.closes,
       }))
     ),
-    sameAs: [`https://wa.me/${siteConfig.whatsappNumber}`],
+    sameAs: [`https://wa.me/${siteConfig.whatsappNumber}`, siteConfig.instagramUrl],
   }
 }
 

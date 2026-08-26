@@ -5,6 +5,8 @@ export const siteConfig = {
   address: 'Ctra. de Sabadell, 26, 08211 Castellar del Vallès, Barcelona',
   phone: '644 69 22 04',
   email: 'readycastellar@gmail.com',
+  instagramHandle: 'readymotos_',
+  instagramUrl: 'https://www.instagram.com/readymotos_/',
   geo: {
     region: 'ES-B',
     placename: 'Castellar del Vallès',
