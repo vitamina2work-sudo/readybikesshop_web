@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react'
-import { ImageOff } from 'lucide-react'
+import { LOCAL_PLACEHOLDER_SRC } from '@/data/staticData'
 import { cn } from '@/lib/utils'
 
 type SafeImageProps = {
@@ -34,16 +34,14 @@ export function SafeImage({
   if (!showImage) {
     if (fallback) return <>{fallback}</>
     return (
-      <div
-        className={cn(
-          'flex size-full items-center justify-center bg-muted text-muted-foreground',
-          fallbackClassName
-        )}
-        role="img"
-        aria-label={alt}
-      >
-        <ImageOff className="size-8 opacity-40" aria-hidden />
-      </div>
+      <img
+        src={LOCAL_PLACEHOLDER_SRC}
+        alt={alt}
+        className={cn('size-full object-contain bg-muted p-6', className, fallbackClassName)}
+        onError={(event) => {
+          event.currentTarget.style.visibility = 'hidden'
+        }}
+      />
     )
   }
 

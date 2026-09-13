@@ -1,3 +1,5 @@
+import { USE_LOCAL_MOCK } from '@/config/dataSource'
+
 type QueryResult<T> = {
   data: T | null
   error: { message: string; code?: string } | null
@@ -57,6 +59,8 @@ function withTimeout<T>(promise: PromiseLike<T>, ms: number): Promise<T> {
 }
 
 export async function safeQuery<T>(query: PromiseLike<QueryResult<T>>): Promise<T | null> {
+  if (USE_LOCAL_MOCK) return null
+
   try {
     const res = await withTimeout(query, QUERY_TIMEOUT_MS)
 

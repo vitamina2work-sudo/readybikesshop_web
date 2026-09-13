@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import { LOCAL_MODE_WRITE_ERROR, USE_LOCAL_MOCK } from '@/config/dataSource'
 import type { Database } from '@/types/database'
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
@@ -26,6 +27,8 @@ export const MAX_IMAGE_SIZE_BYTES = MAX_IMAGE_SIZE_MB * 1024 * 1024
 export type StorageFolder = 'articles' | 'categories' | 'site'
 
 export async function uploadImage(file: File, folder: StorageFolder = 'articles'): Promise<string> {
+  if (USE_LOCAL_MOCK) throw new Error(LOCAL_MODE_WRITE_ERROR)
+
   if (file.size > MAX_IMAGE_SIZE_BYTES) {
     throw new Error(
       `La imagen pesa ${(file.size / 1024 / 1024).toFixed(1)} MB. Máximo ${MAX_IMAGE_SIZE_MB} MB. Comprímela antes de subir.`

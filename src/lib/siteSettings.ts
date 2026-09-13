@@ -1,3 +1,5 @@
+import { LOCAL_MODE_WRITE_ERROR, USE_LOCAL_MOCK } from '@/config/dataSource'
+import { STATIC_SITE_SETTINGS } from '@/data/staticData'
 import { supabase } from '@/lib/supabase'
 import { safeQuery } from '@/lib/safeSupabase'
 
@@ -49,15 +51,19 @@ function rowsToSettings(rows: { key: string; value: string }[]): SiteSettings {
 }
 
 export async function fetchSiteSettings(): Promise<SiteSettings> {
+  if (USE_LOCAL_MOCK) return { ...STATIC_SITE_SETTINGS }
+
   const data = await safeQuery(supabase.from('site_settings').select('key, value'))
 
-  if (!data) return { ...defaultSiteSettings }
+  if (!data) return { ...STATIC_SITE_SETTINGS }
   return rowsToSettings(data)
 }
 
 export async function saveSiteSettings(
   updates: Partial<SiteSettings>
 ): Promise<{ error: Error | null }> {
+  if (USE_LOCAL_MOCK) return { error: new Error(LOCAL_MODE_WRITE_ERROR) }
+
   const entries = Object.entries(updates) as [SiteSettingKey, string][]
 
   for (const [key, value] of entries) {

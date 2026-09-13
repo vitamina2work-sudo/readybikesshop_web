@@ -68,6 +68,11 @@ export function OfficialDealers({ variant = 'hero', className }: OfficialDealers
                 )}
                 loading="lazy"
                 decoding="async"
+                onError={(event) => {
+                  if (!event.currentTarget.src.includes('/images/placeholder.svg')) {
+                    event.currentTarget.src = '/images/placeholder.svg'
+                  }
+                }}
               />
             </div>
             <span className="text-xs font-medium text-muted-foreground group-hover:text-primary">

@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import type { ArticleWithCategory, Category } from '@/types/database'
 import { fetchPublicArticles, fetchPublicCategories } from '@/lib/publicCatalog'
-import { FALLBACK_ARTICLES, FALLBACK_CATEGORIES } from '@/data/fallback'
+import { STATIC_ARTICLES, STATIC_CATEGORIES } from '@/data/staticData'
 import { SafeImage } from '@/components/media/SafeImage'
 import { useSiteSettings } from '@/hooks/useSiteSettings'
 import {
@@ -47,8 +47,8 @@ export function CatalogPage() {
         setArticles(nextArticles)
         setCategories(nextCategories)
       } catch {
-        setArticles(FALLBACK_ARTICLES)
-        setCategories(FALLBACK_CATEGORIES)
+        setArticles(STATIC_ARTICLES)
+        setCategories(STATIC_CATEGORIES)
       } finally {
         setLoading(false)
       }

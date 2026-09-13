@@ -6,11 +6,8 @@ import {
   useState,
   type ReactNode,
 } from 'react'
-import {
-  defaultSiteSettings,
-  fetchSiteSettings,
-  type SiteSettings,
-} from '@/lib/siteSettings'
+import { STATIC_SITE_SETTINGS } from '@/data/staticData'
+import { fetchSiteSettings, type SiteSettings } from '@/lib/siteSettings'
 
 interface SiteSettingsContextValue {
   settings: SiteSettings
@@ -23,7 +20,7 @@ const SiteSettingsContext = createContext<SiteSettingsContextValue | undefined>(
 )
 
 export function SiteSettingsProvider({ children }: { children: ReactNode }) {
-  const [settings, setSettings] = useState<SiteSettings>(defaultSiteSettings)
+  const [settings, setSettings] = useState<SiteSettings>(STATIC_SITE_SETTINGS)
   const [loading, setLoading] = useState(true)
 
   const refresh = useCallback(async () => {
@@ -31,14 +28,14 @@ export function SiteSettingsProvider({ children }: { children: ReactNode }) {
       const data = await fetchSiteSettings()
       setSettings(data)
     } catch {
-      setSettings({ ...defaultSiteSettings })
+      setSettings({ ...STATIC_SITE_SETTINGS })
     }
   }, [])
 
   useEffect(() => {
     fetchSiteSettings()
       .then(setSettings)
-      .catch(() => setSettings({ ...defaultSiteSettings }))
+      .catch(() => setSettings({ ...STATIC_SITE_SETTINGS }))
       .finally(() => setLoading(false))
   }, [])
 

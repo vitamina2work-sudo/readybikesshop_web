@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none">
+  <rect width="640" height="480" fill="#111"/>
+  <circle cx="220" cy="320" r="52" stroke="#c0392b" stroke-width="12"/>
+  <circle cx="430" cy="320" r="52" stroke="#fff" stroke-width="12"/>
+  <path d="M220 268c50-12 86-86 132-86h62l48 86" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="320" y="120" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="28" font-weight="700">TRRS</text>
+</svg>

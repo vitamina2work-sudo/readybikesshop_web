@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { ArrowRight } from 'lucide-react'
 import type { Category } from '@/types/database'
 import { fetchPublicCategories } from '@/lib/publicCatalog'
-import { FALLBACK_CATEGORIES } from '@/data/fallback'
+import { STATIC_CATEGORIES } from '@/data/staticData'
 import { SafeImage } from '@/components/media/SafeImage'
 import { Button } from '@/components/ui/button'
 
@@ -15,7 +15,7 @@ export function CategoriesShowcase() {
   useEffect(() => {
     fetchPublicCategories()
       .then(setCategories)
-      .catch(() => setCategories(FALLBACK_CATEGORIES))
+      .catch(() => setCategories(STATIC_CATEGORIES))
   }, [])
 
   if (categories.length === 0) return null

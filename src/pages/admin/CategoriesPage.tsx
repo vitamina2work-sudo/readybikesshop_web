@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Plus } from 'lucide-react'
+import { LOCAL_MODE_WRITE_ERROR, USE_LOCAL_MOCK } from '@/config/dataSource'
+import { fetchPublicCategories } from '@/lib/publicCatalog'
 import { supabase } from '@/lib/supabase'
 import type { Category } from '@/types/database'
 import { CategoryForm, type CategoryFormData } from '@/components/admin/CategoryForm'
@@ -19,8 +21,7 @@ export function CategoriesPage() {
   const [editing, setEditing] = useState<Category | null>(null)
 
   const load = async () => {
-    const { data } = await supabase.from('categories').select('*').order('name')
-    if (data) setCategories(data)
+    setCategories(await fetchPublicCategories())
   }
 
   useEffect(() => {
@@ -28,6 +29,11 @@ export function CategoriesPage() {
   }, [])
 
   const handleSubmit = async (data: CategoryFormData) => {
+    if (USE_LOCAL_MOCK) {
+      toast.error(LOCAL_MODE_WRITE_ERROR)
+      return
+    }
+
     const payload = {
       name: data.name.trim(),
       slug: data.slug.trim(),
@@ -56,6 +62,10 @@ export function CategoriesPage() {
   }
 
   const handleDelete = async (id: string) => {
+    if (USE_LOCAL_MOCK) {
+      toast.error(LOCAL_MODE_WRITE_ERROR)
+      return
+    }
     if (!confirm('¿Eliminar esta categoría?')) return
 
     const { error } = await supabase.from('categories').delete().eq('id', id)

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Package, Tags } from 'lucide-react'
-import { supabase } from '@/lib/supabase'
+import { fetchPublicArticles, fetchPublicCategories } from '@/lib/publicCatalog'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
@@ -10,16 +10,15 @@ export function DashboardPage() {
 
   useEffect(() => {
     async function load() {
-      const [articlesRes, categoriesRes, saleRes] = await Promise.all([
-        supabase.from('articles').select('id', { count: 'exact', head: true }),
-        supabase.from('categories').select('id', { count: 'exact', head: true }),
-        supabase.from('articles').select('id', { count: 'exact', head: true }).eq('on_sale', true),
+      const [articles, categories] = await Promise.all([
+        fetchPublicArticles(),
+        fetchPublicCategories(),
       ])
 
       setCounts({
-        articles: articlesRes.count ?? 0,
-        categories: categoriesRes.count ?? 0,
-        onSale: saleRes.count ?? 0,
+        articles: articles.length,
+        categories: categories.length,
+        onSale: articles.filter((article) => article.on_sale).length,
       })
     }
 

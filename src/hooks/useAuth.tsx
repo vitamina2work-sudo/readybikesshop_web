@@ -6,6 +6,7 @@ import {
   type ReactNode,
 } from 'react'
 import type { Session, User } from '@supabase/supabase-js'
+import { LOCAL_MODE_WRITE_ERROR, USE_LOCAL_MOCK } from '@/config/dataSource'
 import { supabase } from '@/lib/supabase'
 
 export interface Profile {
@@ -65,6 +66,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   useEffect(() => {
+    if (USE_LOCAL_MOCK) {
+      setLoading(false)
+      return
+    }
+
     let mounted = true
 
     const applySession = async (s: Session | null) => {
@@ -95,11 +101,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const signIn = async (email: string, password: string) => {
+    if (USE_LOCAL_MOCK) return { error: new Error(LOCAL_MODE_WRITE_ERROR) }
     const { error } = await supabase.auth.signInWithPassword({ email, password })
     return { error: error ? new Error(error.message) : null }
   }
 
   const signUp = async (email: string, password: string, fullName: string) => {
+    if (USE_LOCAL_MOCK) return { error: new Error(LOCAL_MODE_WRITE_ERROR) }
     const { error } = await supabase.auth.signUp({
       email,
       password,
@@ -109,11 +117,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   const signOut = async () => {
-    await supabase.auth.signOut()
+    if (!USE_LOCAL_MOCK) await supabase.auth.signOut()
     setProfile(null)
   }
 
   const updateProfile = async (data: { full_name?: string; phone?: string }) => {
+    if (USE_LOCAL_MOCK) return { error: new Error(LOCAL_MODE_WRITE_ERROR) }
     if (!session?.user) return { error: new Error('Not authenticated') }
 
     const { error } = await supabase

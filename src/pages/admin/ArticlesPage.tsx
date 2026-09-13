@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Plus } from 'lucide-react'
+import { LOCAL_MODE_WRITE_ERROR, USE_LOCAL_MOCK } from '@/config/dataSource'
+import { fetchPublicArticles, fetchPublicCategories } from '@/lib/publicCatalog'
 import { supabase } from '@/lib/supabase'
 import type { ArticleWithCategory, Category } from '@/types/database'
 import { ArticleForm, type ArticleFormData } from '@/components/admin/ArticleForm'
@@ -20,16 +22,12 @@ export function ArticlesPage() {
   const [editing, setEditing] = useState<ArticleWithCategory | null>(null)
 
   const load = async () => {
-    const [articlesRes, categoriesRes] = await Promise.all([
-      supabase
-        .from('articles')
-        .select('*, categories(id, name, slug)')
-        .order('created_at', { ascending: false }),
-      supabase.from('categories').select('*').order('name'),
+    const [nextArticles, nextCategories] = await Promise.all([
+      fetchPublicArticles(),
+      fetchPublicCategories(),
     ])
-
-    if (articlesRes.data) setArticles(articlesRes.data as ArticleWithCategory[])
-    if (categoriesRes.data) setCategories(categoriesRes.data)
+    setArticles(nextArticles)
+    setCategories(nextCategories)
   }
 
   useEffect(() => {
@@ -37,6 +35,11 @@ export function ArticlesPage() {
   }, [])
 
   const handleSubmit = async (data: ArticleFormData) => {
+    if (USE_LOCAL_MOCK) {
+      toast.error(LOCAL_MODE_WRITE_ERROR)
+      return
+    }
+
     const payload = {
       title: data.title.trim(),
       description: data.description.trim() || null,
@@ -68,6 +71,10 @@ export function ArticlesPage() {
   }
 
   const handleDelete = async (id: string) => {
+    if (USE_LOCAL_MOCK) {
+      toast.error(LOCAL_MODE_WRITE_ERROR)
+      return
+    }
     if (!confirm('¿Eliminar este artículo?')) return
 
     const { error } = await supabase.from('articles').delete().eq('id', id)

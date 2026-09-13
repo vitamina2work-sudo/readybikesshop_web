@@ -1,3 +1,4 @@
+import { USE_LOCAL_MOCK } from '@/config/dataSource'
 import { supabase } from '@/lib/supabase'
 
 export type DiagnosticStatus = 'ok' | 'warn' | 'error' | 'pending'
@@ -74,6 +75,18 @@ async function probeSupabaseHost(url: string): Promise<{ ok: boolean; detail: st
 }
 
 export async function runSupabaseDiagnostics(): Promise<DiagnosticCheck[]> {
+  if (USE_LOCAL_MOCK) {
+    return [
+      {
+        id: 'local-mock',
+        label: 'Modo local (USE_LOCAL_MOCK)',
+        status: 'warn',
+        detail: 'Supabase está aislado. Catálogo, categorías y site_settings se sirven desde src/data/staticData.ts.',
+        hint: 'La web pública no llama a jjqcxmvnubusijbvkvri.supabase.co. Pon USE_LOCAL_MOCK = false en src/config/dataSource.ts cuando la cuota esté restaurada.',
+      },
+    ]
+  }
+
   const checks: DiagnosticCheck[] = []
   const config = getSupabaseConfig()
 
