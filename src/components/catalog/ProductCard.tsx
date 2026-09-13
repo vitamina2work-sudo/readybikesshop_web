@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { formatPriceLocalized } from '@/lib/whatsapp'
 import { buildArticleWhatsAppMessage, buildWhatsAppUrl } from '@/lib/whatsapp'
+import { SafeImage } from '@/components/media/SafeImage'
 
 interface ProductCardProps {
   article: ArticleWithCategory
@@ -20,18 +21,16 @@ export function ProductCard({ article }: ProductCardProps) {
   return (
     <Card className="overflow-hidden pt-0 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group border-0 shadow-md ring-1 ring-border/50">
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-        {article.image_url ? (
-          <img
-            src={article.image_url}
-            alt={article.title}
-            className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
-          />
-        ) : (
-          <div className="flex size-full items-center justify-center text-muted-foreground text-sm">
-            {t('catalog.noImage')}
-          </div>
-        )}
+        <SafeImage
+          src={article.image_url}
+          alt={article.title}
+          className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
+          fallback={
+            <div className="flex size-full items-center justify-center text-muted-foreground text-sm">
+              {t('catalog.noImage')}
+            </div>
+          }
+        />
         {article.on_sale && (
           <Badge variant="sale" className="absolute top-3 left-3">
             {t('catalog.onSale')}

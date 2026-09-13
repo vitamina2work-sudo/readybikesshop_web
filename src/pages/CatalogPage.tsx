@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { supabase } from '@/lib/supabase'
 import type { ArticleWithCategory, Category } from '@/types/database'
+import { fetchPublicArticles, fetchPublicCategories } from '@/lib/publicCatalog'
+import { FALLBACK_ARTICLES, FALLBACK_CATEGORIES } from '@/data/fallback'
+import { SafeImage } from '@/components/media/SafeImage'
 import { useSiteSettings } from '@/hooks/useSiteSettings'
 import {
   CatalogFilters,
@@ -37,17 +39,19 @@ export function CatalogPage() {
     async function load() {
       setLoading(true)
 
-      const [articlesRes, categoriesRes] = await Promise.all([
-        supabase
-          .from('articles')
-          .select('*, categories(id, name, slug)')
-          .order('created_at', { ascending: false }),
-        supabase.from('categories').select('*').order('name'),
-      ])
-
-      if (articlesRes.data) setArticles(articlesRes.data as ArticleWithCategory[])
-      if (categoriesRes.data) setCategories(categoriesRes.data)
-      setLoading(false)
+      try {
+        const [nextArticles, nextCategories] = await Promise.all([
+          fetchPublicArticles(),
+          fetchPublicCategories(),
+        ])
+        setArticles(nextArticles)
+        setCategories(nextCategories)
+      } catch {
+        setArticles(FALLBACK_ARTICLES)
+        setCategories(FALLBACK_CATEGORIES)
+      } finally {
+        setLoading(false)
+      }
     }
 
     load()
@@ -83,10 +87,11 @@ export function CatalogPage() {
     <div>
       {settings.catalog_banner_url ? (
         <div className="relative h-48 sm:h-64 overflow-hidden">
-          <img
+          <SafeImage
             src={settings.catalog_banner_url}
             alt=""
             className="size-full object-cover"
+            fallback={<div className="size-full bg-gradient-to-br from-primary/20 via-muted to-background" />}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">

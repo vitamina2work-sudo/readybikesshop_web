@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { ArrowRight, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useSiteSettings } from '@/hooks/useSiteSettings'
+import { SafeImage } from '@/components/media/SafeImage'
 import { buildGeneralWhatsAppMessage, buildWhatsAppUrl } from '@/lib/whatsapp'
 
 export function CtaSection() {
@@ -34,17 +35,16 @@ export function CtaSection() {
               </div>
             </div>
             <div className="relative min-h-[280px] bg-muted lg:min-h-full">
-              {settings.cta_image_url ? (
-                <img
-                  src={settings.cta_image_url}
-                  alt=""
-                  className="absolute inset-0 size-full object-cover"
-                />
-              ) : (
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/25 via-primary/10 to-transparent flex items-center justify-center">
-                  <MessageCircle className="size-24 text-primary/25" />
-                </div>
-              )}
+              <SafeImage
+                src={settings.cta_image_url || null}
+                alt=""
+                className="absolute inset-0 size-full object-cover"
+                fallback={
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/25 via-primary/10 to-transparent flex items-center justify-center">
+                    <MessageCircle className="size-24 text-primary/25" />
+                  </div>
+                }
+              />
             </div>
           </div>
         </div>

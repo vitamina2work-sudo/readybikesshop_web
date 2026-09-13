@@ -9,6 +9,7 @@ import {
 import { siteConfig } from '@/config/site'
 import { SERVICE_IMAGE_KEYS } from '@/lib/siteSettings'
 import { useSiteSettings } from '@/hooks/useSiteSettings'
+import { SafeImage } from '@/components/media/SafeImage'
 
 const iconMap: Record<string, LucideIcon> = {
   Wrench,
@@ -30,19 +31,18 @@ export function Services() {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t('services.title')}</h2>
             <p className="mt-4 text-muted-foreground text-lg leading-relaxed">{t('services.subtitle')}</p>
           </div>
-          {settings.about_image_url ? (
-            <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-border/50">
-              <img
-                src={settings.about_image_url}
-                alt=""
-                className="aspect-[4/3] w-full object-cover"
-              />
-            </div>
-          ) : (
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 ring-1 ring-primary/10 flex items-center justify-center">
-              <Wrench className="size-16 text-primary/40" />
-            </div>
-          )}
+          <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-border/50">
+            <SafeImage
+              src={settings.about_image_url || null}
+              alt=""
+              className="aspect-[4/3] w-full object-cover"
+              fallback={
+                <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 ring-1 ring-primary/10 flex items-center justify-center">
+                  <Wrench className="size-16 text-primary/40" />
+                </div>
+              }
+            />
+          </div>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -58,18 +58,16 @@ export function Services() {
                 style={{ animationDelay: `${i * 80}ms` }}
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-muted">
-                  {imageUrl ? (
-                    <img
-                      src={imageUrl}
-                      alt=""
-                      className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="flex size-full items-center justify-center bg-gradient-to-br from-primary/15 to-transparent">
-                      <Icon className="size-12 text-primary/50" />
-                    </div>
-                  )}
+                  <SafeImage
+                    src={imageUrl || null}
+                    alt=""
+                    className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    fallback={
+                      <div className="flex size-full items-center justify-center bg-gradient-to-br from-primary/15 to-transparent">
+                        <Icon className="size-12 text-primary/50" />
+                      </div>
+                    }
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-3 flex size-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
                     <Icon className="size-5" />

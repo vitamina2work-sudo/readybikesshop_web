@@ -171,11 +171,19 @@ export async function runSupabaseDiagnostics(): Promise<DiagnosticCheck[]> {
 
   // REST — lectura pública de categories
   try {
-    const { error, count } = await supabase
+    const { error, count, status } = await supabase
       .from('categories')
       .select('id', { count: 'exact', head: true })
 
-    if (error) {
+    if (status === 402 || error?.message.toLowerCase().includes('payment required')) {
+      checks.push({
+        id: 'rest-client',
+        label: 'REST API (categories)',
+        status: 'error',
+        detail: `HTTP ${status} — cuota de Supabase agotada (Payment Required)`,
+        hint: 'La web pública usará datos de respaldo. Restaura el plan o la cuota en supabase.com/dashboard para recuperar el catálogo real.',
+      })
+    } else if (error) {
       checks.push({
         id: 'rest-client',
         label: 'REST API (categories)',

@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase'
+import { safeQuery } from '@/lib/safeSupabase'
 
 export const SITE_SETTING_KEYS = [
   'hero_image_url',
@@ -48,9 +49,9 @@ function rowsToSettings(rows: { key: string; value: string }[]): SiteSettings {
 }
 
 export async function fetchSiteSettings(): Promise<SiteSettings> {
-  const { data, error } = await supabase.from('site_settings').select('key, value')
+  const data = await safeQuery(supabase.from('site_settings').select('key, value'))
 
-  if (error || !data) return { ...defaultSiteSettings }
+  if (!data) return { ...defaultSiteSettings }
   return rowsToSettings(data)
 }
 

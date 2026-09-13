@@ -27,13 +27,18 @@ export function SiteSettingsProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true)
 
   const refresh = useCallback(async () => {
-    const data = await fetchSiteSettings()
-    setSettings(data)
+    try {
+      const data = await fetchSiteSettings()
+      setSettings(data)
+    } catch {
+      setSettings({ ...defaultSiteSettings })
+    }
   }, [])
 
   useEffect(() => {
     fetchSiteSettings()
       .then(setSettings)
+      .catch(() => setSettings({ ...defaultSiteSettings }))
       .finally(() => setLoading(false))
   }, [])
 
