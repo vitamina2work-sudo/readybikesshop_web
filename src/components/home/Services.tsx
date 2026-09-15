@@ -10,6 +10,7 @@ import { siteConfig } from '@/config/site'
 import { SERVICE_IMAGE_KEYS } from '@/lib/siteSettings'
 import { useSiteSettings } from '@/hooks/useSiteSettings'
 import { SafeImage } from '@/components/media/SafeImage'
+import { IMAGE_PRESETS } from '@/lib/storageImage'
 
 const iconMap: Record<string, LucideIcon> = {
   Wrench,
@@ -35,6 +36,7 @@ export function Services() {
             <SafeImage
               src={settings.about_image_url || null}
               alt=""
+              optimize={IMAGE_PRESETS.about}
               className="aspect-[4/3] w-full object-cover"
               fallback={
                 <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 ring-1 ring-primary/10 flex items-center justify-center">
@@ -61,6 +63,7 @@ export function Services() {
                   <SafeImage
                     src={imageUrl || null}
                     alt=""
+                    optimize={IMAGE_PRESETS.serviceCard}
                     className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
                     fallback={
                       <div className="flex size-full items-center justify-center bg-gradient-to-br from-primary/15 to-transparent">

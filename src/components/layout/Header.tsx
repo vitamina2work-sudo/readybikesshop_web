@@ -62,12 +62,17 @@ export function Header() {
               <BrandLogo
                 variant="emblem"
                 src={settings.logo_url}
+                loading="eager"
                 className="size-12 rounded-lg object-cover sm:size-14"
               />
               <span className="sr-only sm:not-sr-only">{siteConfig.name}</span>
             </>
           ) : (
-            <BrandLogo variant="horizontal" className="h-12 max-w-[min(100%,300px)] sm:h-14 sm:max-w-[320px]" />
+            <BrandLogo
+              variant="horizontal"
+              loading="eager"
+              className="h-12 max-w-[min(100%,300px)] sm:h-14 sm:max-w-[320px]"
+            />
           )}
         </Link>
 

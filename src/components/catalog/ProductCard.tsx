@@ -7,6 +7,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { formatPriceLocalized } from '@/lib/whatsapp'
 import { buildArticleWhatsAppMessage, buildWhatsAppUrl } from '@/lib/whatsapp'
 import { SafeImage } from '@/components/media/SafeImage'
+import { IMAGE_PRESETS } from '@/lib/storageImage'
 
 interface ProductCardProps {
   article: ArticleWithCategory
@@ -24,6 +25,7 @@ export function ProductCard({ article }: ProductCardProps) {
         <SafeImage
           src={article.image_url}
           alt={article.title}
+          optimize={IMAGE_PRESETS.productCard}
           className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
           fallback={
             <div className="flex size-full items-center justify-center text-muted-foreground text-sm">

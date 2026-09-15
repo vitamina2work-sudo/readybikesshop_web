@@ -6,6 +6,7 @@ import type { Category } from '@/types/database'
 import { fetchPublicCategories } from '@/lib/publicCatalog'
 import { STATIC_CATEGORIES } from '@/data/staticData'
 import { SafeImage } from '@/components/media/SafeImage'
+import { IMAGE_PRESETS } from '@/lib/storageImage'
 import { Button } from '@/components/ui/button'
 
 export function CategoriesShowcase() {
@@ -47,6 +48,7 @@ export function CategoriesShowcase() {
                 <SafeImage
                   src={cat.image_url}
                   alt={cat.name}
+                  optimize={IMAGE_PRESETS.categoryCard}
                   className="size-full object-cover transition-transform duration-500 group-hover:scale-110"
                   fallback={
                     <div className="flex size-full items-center justify-center bg-gradient-to-br from-primary/20 to-muted text-4xl font-bold text-primary/30">

@@ -5,6 +5,7 @@ import type { ArticleWithCategory, Category } from '@/types/database'
 import { fetchPublicArticles, fetchPublicCategories } from '@/lib/publicCatalog'
 import { STATIC_ARTICLES, STATIC_CATEGORIES } from '@/data/staticData'
 import { SafeImage } from '@/components/media/SafeImage'
+import { IMAGE_PRESETS } from '@/lib/storageImage'
 import { useSiteSettings } from '@/hooks/useSiteSettings'
 import {
   CatalogFilters,
@@ -90,6 +91,7 @@ export function CatalogPage() {
           <SafeImage
             src={settings.catalog_banner_url}
             alt=""
+            optimize={IMAGE_PRESETS.catalogBanner}
             className="size-full object-cover"
             fallback={<div className="size-full bg-gradient-to-br from-primary/20 via-muted to-background" />}
           />

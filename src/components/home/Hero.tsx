@@ -6,6 +6,7 @@ import { OfficialDealers } from '@/components/brand/OfficialDealers'
 import { Button } from '@/components/ui/button'
 import { useSiteSettings } from '@/hooks/useSiteSettings'
 import { SafeImage } from '@/components/media/SafeImage'
+import { IMAGE_PRESETS } from '@/lib/storageImage'
 import { buildAppointmentWhatsAppMessage, buildWhatsAppUrl } from '@/lib/whatsapp'
 
 export function Hero() {
@@ -18,6 +19,8 @@ export function Hero() {
       <SafeImage
         src={settings.hero_image_url || null}
         alt=""
+        loading="eager"
+        optimize={IMAGE_PRESETS.hero}
         className="absolute inset-0 size-full object-cover"
         fallback={
           <>
@@ -36,11 +39,13 @@ export function Hero() {
             <BrandLogo
               variant="emblem"
               src={settings.logo_url}
+              loading="eager"
               className="mb-8 size-24 rounded-2xl object-cover shadow-md sm:size-28 lg:size-32"
             />
           ) : (
             <BrandLogo
               variant="horizontal"
+              loading="eager"
               className="mb-8 h-16 w-auto max-w-[min(100%,340px)] object-contain object-left sm:h-20 sm:max-w-[380px] lg:h-24 lg:max-w-[420px]"
             />
           )}

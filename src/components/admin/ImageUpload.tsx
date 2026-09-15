@@ -1,7 +1,9 @@
 import { useRef, useState } from 'react'
 import { ImagePlus, Loader2, X } from 'lucide-react'
 import { toast } from 'sonner'
+import { SafeImage } from '@/components/media/SafeImage'
 import { Button } from '@/components/ui/button'
+import { IMAGE_PRESETS } from '@/lib/storageImage'
 import { cn } from '@/lib/utils'
 
 interface ImageUploadProps {
@@ -73,13 +75,24 @@ export function ImageUpload({
 
       {value ? (
         <div className="relative group">
-          <img
+          <SafeImage
             src={value}
             alt="Vista previa"
+            optimize={IMAGE_PRESETS.adminPreview}
             className={cn(
               'rounded-xl object-cover border shadow-sm w-full',
               aspectClass[aspect]
             )}
+            fallback={
+              <div
+                className={cn(
+                  'flex items-center justify-center rounded-xl border bg-muted text-xs text-muted-foreground',
+                  aspectClass[aspect]
+                )}
+              >
+                Vista previa no disponible
+              </div>
+            }
           />
           <div className="absolute top-2 right-2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
             <Button
