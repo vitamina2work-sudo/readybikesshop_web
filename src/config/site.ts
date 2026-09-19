@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: import.meta.env.VITE_SITE_NAME ?? 'Ready Motos',
-  url: import.meta.env.VITE_SITE_URL ?? 'https://readybikesshop.vitamina2work.com',
+  url: import.meta.env.VITE_SITE_URL ?? 'https://readymotos.com',
   whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER ?? '34600000000',
   address: 'Ctra. de Sabadell, 26, 08211 Castellar del Vallès, Barcelona',
   phone: '644 69 22 04',

@@ -44,7 +44,7 @@ GitHub Actions (keep-alive cada 3 días, sin pasar por la web)
 
 | Recurso | URL | Notas |
 |---|---|---|
-| **Web producción** | https://readybikesshop.vitamina2work.com | |
+| **Web producción** | https://readymotos.com | |
 | **Web local (dev)** | http://localhost:5173 | `npm run dev` |
 | **Diagnóstico local** | http://localhost:5173/diagnostico | Comprueba Supabase |
 | **Login admin** | /admin/login | |
@@ -54,7 +54,7 @@ GitHub Actions (keep-alive cada 3 días, sin pasar por la web)
 | **Cloudflare Dashboard** | https://dash.cloudflare.com | |
 | **Supabase Dashboard** | https://supabase.com/dashboard | Proyecto: Ready_Bikes_Shop |
 | **Supabase Project URL** | `[EN GESTOR]` | Formato: `https://xxxxx.supabase.co` |
-| **Dominio definitivo cliente** | `[PENDIENTE / EN GESTOR]` | ej. `readybikes.es` |
+| **Dominio definitivo cliente** | https://readymotos.com | Canónica SEO / OG / sitemap |
 
 ---
 
@@ -124,8 +124,8 @@ GitHub Actions (keep-alive cada 3 días, sin pasar por la web)
 |---|---|
 | Site URL | `http://localhost:5173` _(dev)_ |
 | Redirect URLs | `http://localhost:5173/**` |
-| Redirect URLs prod | `https://readybikesshop.vitamina2work.com/**` |
-| Redirect URLs dominio final | `[EN GESTOR]` |
+| Redirect URLs prod | `https://readymotos.com/**` |
+| Redirect URLs dominio final | `https://readymotos.com/**` |
 
 ### 3.4 GitHub
 
@@ -186,7 +186,7 @@ Archivo: raíz del proyecto. **No commitear.** Plantilla: `.env.example`.
 | `SUPABASE_DB_PASSWORD` | Pass BD _(solo admin/migraciones)_ | `[EN GESTOR]` |
 | `VITE_WHATSAPP_NUMBER` | WhatsApp sin + | `[EN GESTOR]` |
 | `VITE_SITE_NAME` | Nombre sitio | `Ready Motos` |
-| `VITE_SITE_URL` | URL pública canonical | `https://readybikesshop.vitamina2work.com` |
+| `VITE_SITE_URL` | URL pública canonical | `https://readymotos.com` |
 
 > Tras cambiar `.env`: `Ctrl+C` → `npm run dev`.
 
@@ -200,7 +200,7 @@ Deben coincidir con local (salvo `VITE_SITE_URL` de producción).
 | `VITE_SUPABASE_ANON_KEY` | `[EN GESTOR]` |
 | `VITE_WHATSAPP_NUMBER` | `[EN GESTOR]` |
 | `VITE_SITE_NAME` | `[EN GESTOR]` |
-| `VITE_SITE_URL` | `[EN GESTOR]` |
+| `VITE_SITE_URL` | `https://readymotos.com` |
 
 ---
 

@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
   const siteUrl =
     env.VITE_SITE_URL ||
     (mode === 'production'
-      ? 'https://readybikesshop.vitamina2work.com'
+      ? 'https://readymotos.com'
       : 'http://localhost:5173')
 
   return {
