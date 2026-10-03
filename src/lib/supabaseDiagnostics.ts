@@ -14,11 +14,20 @@ export interface DiagnosticCheck {
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined
 
-const SUPABASE_PROJECT_REF_RE = /^https:\/\/([a-z0-9]{15,24})\.supabase\.co\/?$/
+const CLOUD_PROJECT_REF_RE = /^https:\/\/([a-z0-9]{15,24})\.supabase\.co\/?$/
 
 function extractProjectRef(url: string): string | null {
-  const match = url.match(SUPABASE_PROJECT_REF_RE)
+  const match = url.match(CLOUD_PROJECT_REF_RE)
   return match?.[1] ?? null
+}
+
+function isValidSupabaseUrl(url: string): boolean {
+  try {
+    const parsed = new URL(url)
+    return parsed.protocol === 'https:' && parsed.hostname.includes('.')
+  } catch {
+    return false
+  }
 }
 
 export function getSupabaseConfig() {
@@ -31,7 +40,7 @@ export function getSupabaseConfig() {
       : '',
     hasUrl: Boolean(supabaseUrl),
     hasKey: Boolean(supabaseAnonKey),
-    hasValidUrlFormat: Boolean(projectRef),
+    hasValidUrlFormat: supabaseUrl ? isValidSupabaseUrl(supabaseUrl) : false,
     isPlaceholder:
       !supabaseUrl ||
       supabaseUrl.includes('your-project') ||
@@ -82,7 +91,7 @@ export async function runSupabaseDiagnostics(): Promise<DiagnosticCheck[]> {
         label: 'Modo local (USE_LOCAL_MOCK)',
         status: 'warn',
         detail: 'Supabase está aislado. Catálogo, categorías y site_settings se sirven desde src/data/staticData.ts.',
-        hint: 'La web pública no llama a jjqcxmvnubusijbvkvri.supabase.co. Pon USE_LOCAL_MOCK = false en src/config/dataSource.ts cuando la cuota esté restaurada.',
+        hint: 'La web pública no llama a https://supabase-readymotos.vitamina2work.com. Pon USE_LOCAL_MOCK = false en src/config/dataSource.ts para usar el backend autoalojado.',
       },
     ]
   }
@@ -106,8 +115,7 @@ export async function runSupabaseDiagnostics(): Promise<DiagnosticCheck[]> {
       !config.hasUrl || config.isPlaceholder
         ? 'Crea o edita .env con la URL de Supabase → Project Settings → API → Project URL.'
         : !config.hasValidUrlFormat
-          ? `Formato inválido. Debe ser https://TU-PROJECT-ID.supabase.co. ` +
-            `Cópiala en Supabase → Integrations → Data API, o mira el ID en la URL del navegador tras /project/.`
+          ? 'Formato inválido. Debe ser una URL https, por ejemplo https://supabase-readymotos.vitamina2work.com.'
           : undefined,
   })
 

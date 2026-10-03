@@ -265,7 +265,7 @@
     "openInBrowser": "Open Supabase URL in browser",
     "useChrome": "Important: open this page in Chrome (http://localhost:5174/diagnostico), not in the editor preview.",
     "help1": "After changing .env: Ctrl+C in terminal → npm run dev → open the URL/port shown in the terminal.",
-    "help2": "In the browser, https://YOUR-ID.supabase.co should respond (even if it says \"invalid route\").",
+    "help2": "In the browser, https://supabase-readymotos.vitamina2work.com should respond (even if it says \"invalid route\").",
     "overall": {
       "ok": "Connection OK. Supabase responds and configuration looks valid.",
       "warn": "Partial connection. Review warnings below.",

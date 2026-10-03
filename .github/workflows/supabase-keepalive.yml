@@ -2,7 +2,7 @@
 # Consulta la API REST directamente — no pasa por la web ni afecta Google Analytics.
 #
 # Secrets en GitHub → Settings → Secrets and variables → Actions:
-#   VITE_SUPABASE_URL       → https://TU-PROJECT-ID.supabase.co
+#   VITE_SUPABASE_URL       → https://supabase-readymotos.vitamina2work.com
 #   VITE_SUPABASE_ANON_KEY  → clave anon/public del proyecto
 
 name: Supabase Keep-Alive

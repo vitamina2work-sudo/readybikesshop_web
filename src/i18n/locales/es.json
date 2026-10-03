@@ -265,7 +265,7 @@
     "openInBrowser": "Abrir URL de Supabase en el navegador",
     "useChrome": "Abre esta página en Chrome externo. Si la URL de Supabase carga en otra pestaña pero aquí falla, desactiva bloqueadores de anuncios.",
     "help1": "Si cambias .env: Ctrl+C en la terminal → npm run dev → abre la URL/puerto que indique la terminal.",
-    "help2": "En el navegador, https://TU-ID.supabase.co debe responder (aunque diga «ruta no válida»).",
+    "help2": "En el navegador, https://supabase-readymotos.vitamina2work.com debe responder (aunque diga «ruta no válida»).",
     "overall": {
       "ok": "Conexión correcta. Supabase responde y la configuración parece válida.",
       "warn": "Conexión parcial. Revisa los avisos abajo.",

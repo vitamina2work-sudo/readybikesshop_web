@@ -265,7 +265,7 @@
     "openInBrowser": "Obrir URL de Supabase al navegador",
     "useChrome": "Important: obre aquesta pàgina a Chrome (http://localhost:5174/diagnostico), no al preview de l'editor.",
     "help1": "Si canvies .env: Ctrl+C a la terminal → npm run dev → obre la URL/port que indiqui la terminal.",
-    "help2": "Al navegador, https://TU-ID.supabase.co ha de respondre (encara que digui «ruta no vàlida»).",
+    "help2": "Al navegador, https://supabase-readymotos.vitamina2work.com ha de respondre (encara que digui «ruta no vàlida»).",
     "overall": {
       "ok": "Connexió correcta. Supabase respon i la configuració sembla vàlida.",
       "warn": "Connexió parcial. Revisa els avisos a sota.",
